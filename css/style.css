@@ -192,14 +192,14 @@ main {
     background-image: url("../assets/images/html.png"); }
 
 section.bio {
-  margin: 120px auto;
+  margin: 150px auto;
   position: relative; }
   section.bio .top-border {
-    height: 300px;
-    background-size: auto 100%;
-    display: flex;
-    flex-direction: column;
-    background-image: url("../assets/images/js-arrow.png"); }
+    height: 700px;
+    background-image: url("../assets/images/scrawls.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; }
   section.bio .short-bio {
     position: absolute;
     left: 50%;
@@ -222,17 +222,5 @@ section.bio {
       font-weight: 600;
       line-height: 2em;
       text-align: justify; }
-  section.bio .bottom-border {
-    height: 300px;
-    background-size: auto 100%;
-    display: flex;
-    flex-direction: column;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-    background-image: url("../assets/images/js-arrow.png");
-    margin-top: 25px; }
 
 /*# sourceMappingURL=style.css.map */
