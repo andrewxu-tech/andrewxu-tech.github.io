@@ -5,6 +5,20 @@ document.addEventListener('scroll', () => {
   fadeUpAndIn();
 });
 
+let counter = 1;
+setInterval(() => {
+  const displayJobs = [
+    '<h1><span class="type-of-developer">web</span><br /><span class="fade-in">developer</span></h1>',
+    '<h1><span class="type-of-developer">JavaScript</span><br />developer</h1>',
+    '<h1><span class="type-of-developer">full-stack</span><br />developer</h1>',
+    '<h1><span class="type-of-developer">ReactJS</span><br />developer</h1>',
+    '<h1><span class="type-of-developer">Node.js</span><br /><span class="fade-after-4-secs">developer</span></h1>',
+    '<h1><span class="type-of-developer">composer,</span><br /><span class="type-of-developer">violinist</span></h1>'
+  ];
+  document.getElementsByClassName('job')[0].innerHTML = displayJobs[counter % displayJobs.length];
+  counter++;
+}, 4000);
+
 function fadeUpAndIn() {
   [...document.getElementsByClassName('fade-up-and-in')].forEach(element => {
     element.currentlyInView = false;
@@ -39,13 +53,3 @@ function bioScroll() {
   document.getElementsByClassName('short-bio-box')[0].style.top = `${ (1 - (distanceToScroll / 4)) * 100 - 50 }%`;
   document.getElementsByClassName('short-bio-box')[0].style.opacity = ((distanceToScroll * 2) - 0.05);
 }
-
-let counter = 1;
-setInterval(() => {
-  const displayJobs = [
-    '<h1>web<br />developer</h1>',
-    '<h1>composer,<br />violinist</h1>'
-  ];
-  document.getElementsByClassName('job')[0].innerHTML = displayJobs[counter % displayJobs.length];
-  counter++;
-}, 4000);

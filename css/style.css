@@ -28,14 +28,32 @@ body header {
     display: block;
     width: 865px;
     height: 450px; }
-    body header div.logo .job {
-      animation: jobanimation 4s infinite; }
-      body header div.logo .job h1 {
-        margin-left: -30px; }
-@keyframes jobanimation {
+    body header div.logo .job .type-of-developer {
+      animation: typeofdeveloperanimation 4s infinite; }
+    body header div.logo .job .fade-after-4-secs {
+      animation: fadeout 4s; }
+    body header div.logo .job .fade-in {
+      animation: fadein 4s; }
+    body header div.logo .job h1 {
+      margin-left: -30px; }
+@keyframes typeofdeveloperanimation {
   0% {
     color: transparent; }
   15% {
+    color: black; }
+  85% {
+    color: black; }
+  100% {
+    color: transparent; } }
+@keyframes fadein {
+  0% {
+    color: transparent; }
+  15% {
+    color: black; }
+  100% {
+    color: black; } }
+@keyframes fadeout {
+  0% {
     color: black; }
   85% {
     color: black; }
@@ -254,13 +272,20 @@ section.bio {
         justify-content: flex-start; }
         section.bio .skills div.skills-list .skills-container span {
           display: inline-block;
-          height: 50px;
+          height: 100px;
           text-align: center;
-          flex-basis: 33%;
+          flex-basis: calc(100% / 3);
           flex-grow: 0;
           font-size: 22px;
-          margin: 10px 0; }
+          margin: 40px 0 0 0;
+          position: relative; }
           section.bio .skills div.skills-list .skills-container span em {
-            font-size: 36px; }
+            font-size: 48px;
+            display: block;
+            margin-bottom: -25px; }
+          section.bio .skills div.skills-list .skills-container span div {
+            position: absolute;
+            width: 100%;
+            bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */
