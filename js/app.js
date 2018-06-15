@@ -1,8 +1,14 @@
 document.addEventListener('scroll', () => {
   titleScroll();
-  bioScroll();
-  unHideAll();
   fadeUpAndIn();
+});
+
+let untouched = true;
+
+document.addEventListener('scroll', () => {
+  if (untouched) {
+    unHideAll();
+  }
 });
 
 let counter = 1;
@@ -38,18 +44,20 @@ function unHideAll() {
   });
 }
 
+[...document.getElementsByClassName('nav-arrow')].forEach(element => {
+  element.addEventListener('click', () => {
+    untouched = false;
+    [...document.getElementsByTagName('section')].forEach(element => {
+      element.setAttribute('hidden', true);
+    });
+    document.getElementsByClassName(element.classList[1])[1].removeAttribute('hidden');
+  });
+});
+
 function titleScroll() {
   const windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   const distanceFromTop = Math.abs(document.getElementsByTagName('header')[0].getBoundingClientRect().top);
   const distanceToScroll = (windowHeight - distanceFromTop) / windowHeight;
   document.getElementsByClassName('logo')[0].style.top = `${(1 - (distanceToScroll / 2)) * 100}%`;
   document.getElementsByClassName('logo')[0].style.opacity = ((distanceToScroll * 2) - 0.5);
-}
-
-function bioScroll() {
-  const windowHeight = Math.max(window.innerHeight || 0);
-  const distanceFromTop = document.getElementsByClassName('short-bio-box')[0].getBoundingClientRect().top;
-  const distanceToScroll = (windowHeight - distanceFromTop) / windowHeight;
-  document.getElementsByClassName('short-bio-box')[0].style.top = `${(1 - (distanceToScroll / 4)) * 100 - 55 }%`;
-  document.getElementsByClassName('short-bio-box')[0].style.opacity = ((distanceToScroll * 2) - 0.05);
 }

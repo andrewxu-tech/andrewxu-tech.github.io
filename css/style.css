@@ -219,73 +219,86 @@ section.projects {
     transform: rotate(180deg);
     background-image: url("../assets/images/html.png"); }
 
-section.bio {
+section.bio-cv {
   margin: 150px auto;
   position: relative; }
-  section.bio .short-bio .background-image {
+  section.bio-cv .short-bio .background-image {
     height: 700px;
+    margin-bottom: 150px;
     background-image: url("../assets/images/scrawls.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative; }
-  section.bio .short-bio .short-bio-box {
+  section.bio-cv .short-bio .short-bio-box {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0px;
+    left: 0;
+    right: 0;
     z-index: 100;
-    margin: -450px auto;
+    margin: -700px auto;
     padding: 30px;
     border-radius: 60px;
     border: 7px solid;
     max-width: 800px;
     background-color: white; }
-    section.bio .short-bio .short-bio-box h2 {
+    section.bio-cv .short-bio .short-bio-box h2 {
       font-size: 36px;
       margin: 15px;
       font-weight: 800; }
-    section.bio .short-bio .short-bio-box p {
-      font-size: 18px;
+    section.bio-cv .short-bio .short-bio-box p {
+      font-size: 22px;
       margin: 0;
       font-weight: 600;
       line-height: 2em;
       text-align: justify; }
-  section.bio .skills {
-    padding: 30px;
-    max-width: 960px;
-    margin: 150px auto; }
-    section.bio .skills h2 {
-      font-size: 36px;
-      font-weight: 800;
-      margin: 0 0 15px 0; }
-    section.bio .skills div.skills-list {
-      background-color: black;
-      color: white;
-      margin: 30px 0;
-      padding: 30px;
-      border-radius: 60px; }
-      section.bio .skills div.skills-list .skills-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: flex-start; }
-        section.bio .skills div.skills-list .skills-container span {
-          display: inline-block;
-          height: 100px;
-          text-align: center;
-          flex-basis: calc(100% / 3);
-          flex-grow: 0;
-          font-size: 22px;
-          margin: 0 0 40px 0;
-          position: relative; }
-          section.bio .skills div.skills-list .skills-container span em {
-            font-size: 48px;
-            display: block;
-            margin-bottom: -25px; }
-          section.bio .skills div.skills-list .skills-container span div {
-            position: absolute;
-            width: 100%;
-            bottom: 0; }
+  section.bio-cv .skills h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0 0 15px 0; }
+  section.bio-cv .skills h2.section-title {
+    margin: 0 0 15px 30px;
+    font-weight: 800; }
+  section.bio-cv .skills h2.section-title.black {
+    color: white;
+    background-color: black;
+    margin: 0 0 15px 30px; }
+  section.bio-cv .skills h2 {
+    font-weight: 400; }
+  section.bio-cv .skills div.skills-list.white {
+    background-color: white;
+    color: black; }
+  section.bio-cv .skills div.skills-list {
+    background-color: black;
+    color: white;
+    margin: 30px 0 0 0;
+    padding: 30px 30px 150px 30px; }
+    section.bio-cv .skills div.skills-list .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start; }
+      section.bio-cv .skills div.skills-list .skills-container p {
+        font-size: 22px; }
+      section.bio-cv .skills div.skills-list .skills-container span {
+        display: inline-block;
+        height: 100px;
+        text-align: center;
+        flex-basis: calc(100% / 8);
+        flex-grow: 0;
+        font-size: 22px;
+        margin: 0 0 40px 0;
+        position: relative; }
+        section.bio-cv .skills div.skills-list .skills-container span em {
+          font-size: 48px;
+          display: block;
+          margin-bottom: -25px; }
+        section.bio-cv .skills div.skills-list .skills-container span div {
+          position: absolute;
+          width: 100%;
+          bottom: 0; }
+  section.bio-cv .experience-education {
+    background-color: black;
+    width: 100%;
+    max-width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
