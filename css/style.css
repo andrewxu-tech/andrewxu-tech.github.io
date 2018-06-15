@@ -16,6 +16,9 @@ body {
   100% {
     transform: translateY(0px);
     opacity: 1; } }
+a {
+  color: inherit; }
+
 body header {
   margin: 0 auto;
   position: relative;
@@ -270,15 +273,48 @@ section.bio-cv {
   section.bio-cv .skills div.skills-list {
     background-color: black;
     color: white;
-    margin: 30px 0 0 0;
     padding: 30px 30px 150px 30px; }
+    section.bio-cv .skills div.skills-list div.experience-educational-details-inner {
+      margin: 50px auto;
+      display: flex;
+      justify-content: space-between; }
+      section.bio-cv .skills div.skills-list div.experience-educational-details-inner .column {
+        width: 49%; }
     section.bio-cv .skills div.skills-list .skills-container {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: flex-start; }
+      section.bio-cv .skills div.skills-list .skills-container div.title-and-logo {
+        width: 100%;
+        min-height: 100px; }
+        section.bio-cv .skills div.skills-list .skills-container div.title-and-logo h2 {
+          float: left; }
+        section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo {
+          float: left;
+          height: 100px;
+          width: 100px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-right: 30px; }
+          section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo.ga-logo {
+            background-image: url("../assets/images/ga-logo.jpg"); }
+          section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo.tido-logo {
+            background-image: url("../assets/images/tido-logo.png"); }
+          section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo.funfind-logo {
+            background-image: url("../assets/images/funfind-logo.png"); }
+          section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo.ram-logo {
+            background-image: url("../assets/images/ram-logo.jpg"); }
+          section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo.lse-logo {
+            background-image: url("../assets/images/lse-logo.png"); }
       section.bio-cv .skills div.skills-list .skills-container p {
-        font-size: 22px; }
+        font-size: 22px;
+        margin-bottom: 100px;
+        text-indent: 50px;
+        display: block; }
+      section.bio-cv .skills div.skills-list .skills-container li p {
+        margin-bottom: 0; }
       section.bio-cv .skills div.skills-list .skills-container span {
         display: inline-block;
         height: 100px;
