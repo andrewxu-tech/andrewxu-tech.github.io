@@ -124,6 +124,19 @@ body header {
     transform: translateY(-10px); }
   100% {
     transform: translateY(-10px); } }
+body .content-nav-arrow {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px; }
+  body .content-nav-arrow.black {
+    color: black; }
+  body .content-nav-arrow.white {
+    color: white; }
+  body .content-nav-arrow .fas {
+    font-size: 48px;
+    margin: 0px;
+    cursor: pointer; }
+
 section.projects {
   background-color: white;
   color: black;
@@ -233,27 +246,28 @@ section.bio-cv {
     background-repeat: no-repeat;
     background-position: center center;
     position: relative; }
-  section.bio-cv .short-bio .short-bio-box {
+  section.bio-cv .short-bio .short-bio-container {
     position: absolute;
     left: 0;
     right: 0;
     z-index: 100;
     margin: -700px auto;
-    padding: 30px;
-    border-radius: 60px;
-    border: 7px solid;
-    max-width: 800px;
-    background-color: white; }
-    section.bio-cv .short-bio .short-bio-box h2 {
-      font-size: 36px;
-      margin: 15px;
-      font-weight: 800; }
-    section.bio-cv .short-bio .short-bio-box p {
-      font-size: 22px;
-      margin: 0;
-      font-weight: 600;
-      line-height: 2em;
-      text-align: justify; }
+    max-width: 800px; }
+    section.bio-cv .short-bio .short-bio-container .short-bio-box {
+      border-radius: 60px;
+      border: 7px solid;
+      background-color: white;
+      padding: 30px; }
+      section.bio-cv .short-bio .short-bio-container .short-bio-box h2 {
+        font-size: 36px;
+        margin: 15px;
+        font-weight: 800; }
+      section.bio-cv .short-bio .short-bio-container .short-bio-box p {
+        font-size: 22px;
+        margin: 0;
+        font-weight: 600;
+        line-height: 2em;
+        text-align: justify; }
   section.bio-cv .skills h2 {
     font-size: 36px;
     font-weight: 800;
@@ -273,7 +287,7 @@ section.bio-cv {
   section.bio-cv .skills div.skills-list {
     background-color: black;
     color: white;
-    padding: 30px 30px 150px 30px; }
+    padding: 30px 30px 300px 30px; }
     section.bio-cv .skills div.skills-list div.experience-educational-details-inner {
       margin: 50px auto;
       display: flex;
@@ -328,6 +342,9 @@ section.bio-cv {
           font-size: 48px;
           display: block;
           margin-bottom: -25px; }
+        section.bio-cv .skills div.skills-list .skills-container span i {
+          font-size: 40px;
+          margin-bottom: -100px; }
         section.bio-cv .skills div.skills-list .skills-container span div {
           position: absolute;
           width: 100%;
