@@ -3,6 +3,10 @@ document.addEventListener('scroll', () => {
   fadeUpAndIn();
 });
 
+window.onbeforeunload = function () {
+  window.scrollTo(0,0);
+};
+
 let untouched = true;
 
 document.addEventListener('scroll', () => {
@@ -71,6 +75,16 @@ function titleScroll() {
   document.getElementsByClassName('logo')[0].style.top = `${(1 - (distanceToScroll / 2)) * 100}%`;
   document.getElementsByClassName('logo')[0].style.opacity = ((distanceToScroll * 2) - 0.5);
 }
+
+[...document.getElementsByTagName('i')].forEach(element => {
+  element.addEventListener('click', () => {
+    console.log('clicked');
+    element.classList.add('expand-border');
+    window.setTimeout(() => {
+      element.classList.remove('expand-border');
+    }, 500);
+  });
+});
 
 [...document.getElementsByTagName('img')].forEach(element => {
   element.src = `./assets/images/portfolio/${element.classList[0]}/1.png`;
