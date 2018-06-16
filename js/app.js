@@ -78,13 +78,43 @@ function titleScroll() {
   [...document.getElementsByClassName('arrow')].forEach(element => {
     if (element.classList[1] === 'left-arrow') {
       element.addEventListener('click', () => {
-        [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/${currentImage - 1}.png`;
-        currentImage -= 1;
+        let maxImages = null;
+        if (element.classList[2] === 'poco-a-poco') {
+          maxImages = 7;
+        } else if (element.classList[2] === 'keyboard-warrior') {
+          maxImages = 4;
+        } else if (element.classList[2] === 'turtle-todo') {
+          maxImages = 3;
+        } else if (element.classList[2] === 'sino') {
+          maxImages = 4;
+        }
+        if (currentImage === 1) {
+          [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/${maxImages}.png`;
+          currentImage = maxImages;
+        } else {
+          [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/${currentImage - 1}.png`;
+          currentImage -= 1;
+        }
       });
     } else {
       element.addEventListener('click', () => {
-        [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/${currentImage + 1}.png`;
-        currentImage += 1;
+        let maxImages = null;
+        if (element.classList[2] === 'poco-a-poco') {
+          maxImages = 7;
+        } else if (element.classList[2] === 'keyboard-warrior') {
+          maxImages = 4;
+        } else if (element.classList[2] === 'turtle-todo') {
+          maxImages = 3;
+        } else if (element.classList[2] === 'sino') {
+          maxImages = 4;
+        }
+        if (currentImage === maxImages) {
+          [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/1.png`;
+          currentImage = 1;
+        } else {
+          [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/${currentImage + 1}.png`;
+          currentImage += 1;
+        }
       });
     }
   });
