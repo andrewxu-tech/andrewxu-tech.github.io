@@ -77,6 +77,7 @@ function titleScroll() {
   let currentImage = 1;
   [...document.getElementsByClassName('arrow')].forEach(element => {
     if (element.classList[1] === 'left-arrow') {
+      const imageElement = [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0];
       element.addEventListener('click', () => {
         let maxImages = null;
         if (element.classList[2] === 'poco-a-poco') {
@@ -89,14 +90,15 @@ function titleScroll() {
           maxImages = 4;
         }
         if (currentImage === 1) {
-          [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/${maxImages}.png`;
+          imageElement.src = `./assets/images/portfolio/${element.classList[2]}/${maxImages}.png`;
           currentImage = maxImages;
         } else {
-          [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/${currentImage - 1}.png`;
+          imageElement.src = `./assets/images/portfolio/${element.classList[2]}/${currentImage - 1}.png`;
           currentImage -= 1;
         }
       });
     } else {
+      const imageElement = [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0];
       element.addEventListener('click', () => {
         let maxImages = null;
         if (element.classList[2] === 'poco-a-poco') {
@@ -108,11 +110,11 @@ function titleScroll() {
         } else if (element.classList[2] === 'sino') {
           maxImages = 4;
         }
-        if (currentImage === maxImages) {
-          [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/1.png`;
+        if (currentImage >= maxImages) {
+          imageElement.src = `./assets/images/portfolio/${element.classList[2]}/1.png`;
           currentImage = 1;
         } else {
-          [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/${currentImage + 1}.png`;
+          imageElement.src = `./assets/images/portfolio/${element.classList[2]}/${currentImage + 1}.png`;
           currentImage += 1;
         }
       });
