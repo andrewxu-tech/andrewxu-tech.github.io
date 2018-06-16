@@ -74,6 +74,11 @@ function titleScroll() {
   const distanceToScroll = (windowHeight - distanceFromTop) / windowHeight;
   document.getElementsByClassName('logo')[0].style.top = `${(1 - (distanceToScroll / 2)) * 100}%`;
   document.getElementsByClassName('logo')[0].style.opacity = ((distanceToScroll * 2) - 0.5);
+  if (((distanceToScroll * 2) - 0.5) <= 0) {
+    document.getElementsByClassName('logo')[0].style.display = 'none';
+  } else {
+    document.getElementsByClassName('logo')[0].style.display = 'inherit';
+  }
 }
 
 [...document.getElementsByTagName('i')].forEach(element => {
