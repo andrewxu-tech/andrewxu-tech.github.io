@@ -72,6 +72,24 @@ function titleScroll() {
   document.getElementsByClassName('logo')[0].style.opacity = ((distanceToScroll * 2) - 0.5);
 }
 
+[...document.getElementsByTagName('img')].forEach(element => {
+  element.src = `./assets/images/portfolio/${element.classList[0]}/1.png`;
+  let currentImage = 1;
+  [...document.getElementsByClassName('arrow')].forEach(element => {
+    if (element.classList[1] === 'left-arrow') {
+      element.addEventListener('click', () => {
+        [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/${currentImage - 1}.png`;
+        currentImage -= 1;
+      });
+    } else {
+      element.addEventListener('click', () => {
+        [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0].src = `./assets/images/portfolio/${element.classList[2]}/${currentImage + 1}.png`;
+        currentImage += 1;
+      });
+    }
+  });
+});
+
 function offset(el) {
   var rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
