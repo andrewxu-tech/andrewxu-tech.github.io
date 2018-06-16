@@ -137,93 +137,93 @@ body .content-nav-arrow {
     margin: 0px;
     cursor: pointer; }
 
-section.projects {
+section.portfolio {
   background-color: white;
   color: black;
   margin: 100px 0; }
-  section.projects .top-border {
+  section.portfolio .top-border {
     height: 300px;
     background-size: auto 100%;
     display: flex;
     flex-direction: column;
     background-image: url("../assets/images/html.png"); }
-  section.projects section {
+  section.portfolio section {
     max-width: 960px;
     margin: 100px auto;
     border-radius: 60px;
     border: 7px solid; }
-    section.projects section div {
+    section.portfolio section div {
       margin: 0px 30px; }
-      section.projects section div h2 {
+      section.portfolio section div h2 {
         color: white;
         font-size: 48px;
         display: inline-block; }
-        section.projects section div h2.poco-a-poco {
+        section.portfolio section div h2.poco-a-poco {
           color: #b73e3e; }
-        section.projects section div h2.turtle-to-do {
+        section.portfolio section div h2.turtle-to-do {
           color: #196d00; }
-        section.projects section div h2.keyboard-warrior {
+        section.portfolio section div h2.keyboard-warrior {
           color: #c48c00; }
-        section.projects section div h2.sino {
+        section.portfolio section div h2.sino {
           color: #490000; }
-      section.projects section div .content {
+      section.portfolio section div .content {
         border-radius: 15px; }
-        section.projects section div .content.poco-a-poco {
+        section.portfolio section div .content.poco-a-poco {
           border: 7px solid #b73e3e; }
-        section.projects section div .content.turtle-to-do {
+        section.portfolio section div .content.turtle-to-do {
           border: 7px solid #196d00; }
-        section.projects section div .content.keyboard-warrior {
+        section.portfolio section div .content.keyboard-warrior {
           border: 7px solid #c48c00; }
-        section.projects section div .content.sino {
+        section.portfolio section div .content.sino {
           border: 7px solid #490000; }
-        section.projects section div .content p {
+        section.portfolio section div .content p {
           font-size: 20px;
           margin: 15px;
           padding: 30px 0; }
-        section.projects section div .content .technologies-used {
+        section.portfolio section div .content .technologies-used {
           font-size: 20px;
           border-radius: 15px;
           color: white;
           padding: 15px;
           margin: 15px; }
-          section.projects section div .content .technologies-used h3 {
+          section.portfolio section div .content .technologies-used h3 {
             margin: 15px 0;
             text-align: center; }
-          section.projects section div .content .technologies-used .flex-container {
+          section.portfolio section div .content .technologies-used .flex-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between; }
-            section.projects section div .content .technologies-used .flex-container span {
+            section.portfolio section div .content .technologies-used .flex-container span {
               margin: 0 15px; }
-              section.projects section div .content .technologies-used .flex-container span em {
+              section.portfolio section div .content .technologies-used .flex-container span em {
                 font-size: 36px; }
-          section.projects section div .content .technologies-used.poco-a-poco {
+          section.portfolio section div .content .technologies-used.poco-a-poco {
             background-color: #b73e3e;
             border: 7px solid #b73e3e; }
-          section.projects section div .content .technologies-used.turtle-to-do {
+          section.portfolio section div .content .technologies-used.turtle-to-do {
             background-color: #196d00;
             border: 7px solid #196d00; }
-          section.projects section div .content .technologies-used.keyboard-warrior {
+          section.portfolio section div .content .technologies-used.keyboard-warrior {
             background-color: #c48c00;
             border: 7px solid #c48c00; }
-          section.projects section div .content .technologies-used.sino {
+          section.portfolio section div .content .technologies-used.sino {
             background-color: #490000;
             border: 7px solid #490000; }
-      section.projects section div .show-screenshots {
+      section.portfolio section div .show-screenshots {
         font-size: 24px;
         text-align: center;
         margin: 30px 0; }
-        section.projects section div .show-screenshots i {
+        section.portfolio section div .show-screenshots i {
           cursor: pointer; }
-        section.projects section div .show-screenshots h3 {
+        section.portfolio section div .show-screenshots h3 {
           margin: 0;
           cursor: pointer; }
-    section.projects section hr {
+    section.portfolio section hr {
       height: 7px;
       background-color: black;
       border: 0;
       margin: 100px 0; }
-  section.projects .bottom-border {
+  section.portfolio .bottom-border {
     height: 300px;
     background-size: auto 100%;
     display: flex;
