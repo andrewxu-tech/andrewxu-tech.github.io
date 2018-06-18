@@ -154,9 +154,9 @@ function titleScroll() {
   element.addEventListener('click', () => {
     const portfolioItemDiv = document.getElementsByClassName('portfolio-item-details')[0];
     portfolioItemDiv.removeAttribute('hidden');
-    portfolioItemDiv.classList.remove('fade-in');
+    portfolioItemDiv.classList.add('fade-in');
     window.setTimeout(() => {
-      portfolioItemDiv.removeAttribute('fade-in');
+      portfolioItemDiv.classList.remove('fade-in');
     }, 500);
   });
 });
