@@ -52,6 +52,9 @@ code {
   padding: 0 3px;
   border-radius: 5px; }
 
+.hidden {
+  display: none !important; }
+
 body header {
   margin: 0 auto;
   position: relative;
@@ -481,5 +484,38 @@ section.bio-cv {
     background-color: black;
     width: 100%;
     max-width: 100%; }
+
+section.contact {
+  height: 110vh;
+  width: 100vw;
+  position: relative;
+  background-color: black; }
+  section.contact .contact-content {
+    background-color: white;
+    max-width: 960px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    padding: 40px;
+    border-radius: 60px; }
+    section.contact .contact-content div {
+      width: 100%;
+      text-align: right;
+      position: relative;
+      bottom: -200px; }
+      section.contact .contact-content div .small-light {
+        font-size: 26px;
+        font-weight: 100; }
+      section.contact .contact-content div .bold-name {
+        font-weight: 800; }
+      section.contact .contact-content div .semi-bold {
+        font-weight: 600; }
+      section.contact .contact-content div .punctuation {
+        text-align: center;
+        display: inline-block;
+        width: 15px; }
 
 /*# sourceMappingURL=style.css.map */

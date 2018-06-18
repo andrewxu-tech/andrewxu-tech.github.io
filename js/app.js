@@ -7,14 +7,6 @@ window.onbeforeunload = function () {
   window.scrollTo(0,0);
 };
 
-let untouched = true;
-
-document.addEventListener('scroll', () => {
-  if (untouched) {
-    unHideAll();
-  }
-});
-
 let counter = 1;
 setInterval(() => {
   const displayJobs = [
@@ -43,19 +35,12 @@ function fadeUpAndIn() {
   });
 }
 
-function unHideAll() {
-  [...document.getElementsByTagName('section')].forEach(element => {
-    element.removeAttribute('hidden');
-  });
-}
-
 [...document.getElementsByClassName('nav-arrow')].forEach(element => {
   element.addEventListener('click', () => {
-    untouched = false;
     [...document.getElementsByTagName('section')].forEach(element => {
-      element.setAttribute('hidden', true);
+      element.classList.add('hidden');
     });
-    document.getElementsByClassName(element.classList[1])[1].removeAttribute('hidden');
+    document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
     window.smoothScrollTo(0, 1000, 1500);
   });
 });
