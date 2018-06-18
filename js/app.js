@@ -15,7 +15,7 @@ setInterval(() => {
     '<h1><span class="type-of-developer">full-stack</span><br />developer</h1>',
     '<h1><span class="type-of-developer">ReactJS</span><br />developer</h1>',
     '<h1><span class="type-of-developer">Node.js</span><br />developer</h1>',
-    '<h1><span class="type-of-developer">HTML<br />& CSS</span><br /><span class="fade-after-4-secs">developer</span></h1>',
+    '<h1><span class="type-of-developer">HTML5<br />& CSS3</span><br /><span class="fade-after-4-secs">developer</span></h1>',
     '<h1><span class="type-of-developer">composer,</span><br /><span class="type-of-developer">violinist</span></h1>'
   ];
   document.getElementsByClassName('job')[0].innerHTML = displayJobs[counter % displayJobs.length];

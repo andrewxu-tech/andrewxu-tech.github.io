@@ -419,6 +419,8 @@ section.bio-cv {
     background-color: black;
     color: white;
     padding: 30px 30px 300px 30px; }
+    section.bio-cv .skills div.skills-list.experience-education-details {
+      padding: 30px; }
     section.bio-cv .skills div.skills-list div.experience-educational-details-inner {
       margin: 50px auto;
       display: flex;
@@ -489,15 +491,18 @@ section.contact {
   height: 110vh;
   width: 100vw;
   position: relative;
-  background-color: black; }
+  background-color: black;
+  background-image: url("../assets/images/scrawls-inverted.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; }
   section.contact .contact-content {
     background-color: white;
     max-width: 960px;
     height: 500px;
     margin: 0 auto;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: -30vh;
     font-size: 36px;
     padding: 40px;
     border-radius: 60px; }
