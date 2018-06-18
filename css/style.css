@@ -17,7 +17,7 @@ body {
     transform: translateY(0px);
     opacity: 1; } }
 .fade-out {
-  animation: fadeOut 0.125s; }
+  animation: fadeOut 0.5s; }
 
 @keyframes fadeOut {
   0% {
@@ -25,7 +25,7 @@ body {
   100% {
     opacity: 0; } }
 .fade-in {
-  animation: fadeIn 0.125s; }
+  animation: fadeIn 0.5s; }
 
 @keyframes fadeIn {
   0% {
@@ -327,6 +327,9 @@ section.portfolio {
       padding: 15px;
       font-size: 20px;
       overflow-y: scroll; }
+      section.portfolio .portfolio-item-details .portfolio-item-info h2 {
+        margin: 0;
+        font-size: 28px; }
 
 section.bio-cv {
   margin: 150px auto;

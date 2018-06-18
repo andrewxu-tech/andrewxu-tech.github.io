@@ -150,6 +150,26 @@ function titleScroll() {
   });
 });
 
+[...document.getElementsByClassName('hover-over')].forEach(element => {
+  element.addEventListener('click', () => {
+    const portfolioItemDiv = document.getElementsByClassName('portfolio-item-details')[0];
+    portfolioItemDiv.removeAttribute('hidden');
+    portfolioItemDiv.classList.remove('fade-in');
+    window.setTimeout(() => {
+      portfolioItemDiv.removeAttribute('fade-in');
+    }, 500);
+  });
+});
+
+[...document.getElementsByClassName('portfolio-item-close')][0].addEventListener('click', () => {
+  const portfolioItemDiv = document.getElementsByClassName('portfolio-item-details')[0];
+  portfolioItemDiv.classList.add('fade-out');
+  window.setTimeout(() => {
+    portfolioItemDiv.setAttribute('hidden', true);
+    portfolioItemDiv.classList.remove('fade-out');
+  }, 500);
+});
+
 function offset(el) {
   var rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
