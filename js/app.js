@@ -83,7 +83,6 @@ function titleScroll() {
 
 [...document.getElementsByTagName('i')].forEach(element => {
   element.addEventListener('click', () => {
-    console.log('clicked');
     element.classList.add('expand-border');
     window.setTimeout(() => {
       element.classList.remove('expand-border');
@@ -96,7 +95,12 @@ function titleScroll() {
   let currentImage = 1;
   [...document.getElementsByClassName('arrow')].forEach(element => {
     if (element.classList[1] === 'left-arrow') {
-      const imageElement = [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0];
+      let imageElement;
+      if (element.classList[3] === 'large-carousel') {
+        imageElement = [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[1] === 'large-carousel')[0];
+      } else {
+        imageElement = [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0];
+      }
       element.addEventListener('click', () => {
         let maxImages = null;
         if (element.classList[2] === 'poco-a-poco') {
@@ -117,7 +121,12 @@ function titleScroll() {
         }
       });
     } else {
-      const imageElement = [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0];
+      let imageElement;
+      if (element.classList[3] === 'large-carousel') {
+        imageElement = [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[1] === 'large-carousel')[0];
+      } else {
+        imageElement = [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0];
+      }
       element.addEventListener('click', () => {
         let maxImages = null;
         if (element.classList[2] === 'poco-a-poco') {
