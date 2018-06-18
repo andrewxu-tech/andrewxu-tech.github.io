@@ -140,7 +140,7 @@
           <div class="arrow left-arrow poco-a-poco"><i class="fas fa-angle-left"></i></div>
           <div class="carousel-images">
             <img class="poco-a-poco" />
-            <div class="hover-over">
+            <div class="hover-over poco-a-poco">
               <div>Music practice tracker app, built using the MERN stack.</div>
             </div>
           </div>
@@ -157,7 +157,7 @@
           <div class="arrow left-arrow keyboard-warrior"><i class="fas fa-angle-left"></i></div>
           <div class="carousel-images">
             <img class="keyboard-warrior" />
-            <div class="hover-over">
+            <div class="hover-over keyboard-warrior">
               <div>Piano-based rhythm game written in vanilla JavaScript</div>
             </div>
           </div>
@@ -174,7 +174,7 @@
           <div class="arrow left-arrow turtle-todo"><i class="fas fa-angle-left"></i></div>
           <div class="carousel-images">
             <img class="turtle-todo" />
-            <div class="hover-over">
+            <div class="hover-over turtle-todo">
               <div>Gamified to-do-list app, built using the MEAN stack.</div>
             </div>
           </div>
@@ -191,7 +191,7 @@
           <div class="arrow left-arrow sino"><i class="fas fa-angle-left"></i></div>
           <div class="carousel-images">
             <img class="sino" />
-            <div class="hover-over">
+            <div class="hover-over sino">
               <div>Restaurant review system built using a Node.js backend.</div>
             </div>
           </div>
@@ -200,21 +200,32 @@
       </div>
       <div class="portfolio-item-details" hidden>
         <div class="portfolio-item-close"><i class="fas fa-times"></i></div>
-        <h1 class="portfolio-item-title">poco a poco</h1>
+        <div class="portfolio-item-title-container">
+          <h1 class="portfolio-item-title">poco a poco</h1>
+          <h2 class="portfolio-item-link">
+            <a target="_blank" class="portfolio-item-github"><i class="fab fa-github"></i>&nbsp;GitHub</a>&emsp;
+            <a target="_blank" class="portfolio-item-link"><i class="fas fa-external-link-alt"></i>&nbsp;Link</a>
+          </h2>
+        </div>
         <div class="carousel-container fade-up-and-in">
-          <div class="arrow left-arrow poco-a-poco large-carousel"><i class="fas fa-angle-left"></i></div>
+          <div class="arrow left-arrow portfolio-item-name large-carousel portfolio-item-name-replace"><i class="fas fa-angle-left"></i></div>
           <div class="carousel-images">
-            <img class="poco-a-poco large-carousel" />
+            <a class="portfolio-item-link" target="_blank">
+              <img class="portfolio-item-name large-carousel large-carousel-image portfolio-item-name-replace" />
+            </a>
           </div>
-          <div class="arrow right-arrow poco-a-poco large-carousel"><i class="fas fa-angle-right"></i></div>
+          <div class="arrow right-arrow portfolio-item-name large-carousel portfolio-item-name-replace"><i class="fas fa-angle-right"></i></div>
         </div>
         <div class="portfolio-item-info">
-          <h2>Technologies Used:</h2>
-          <p>&emsp;As a former music student, I am painfully aware of how frustrating practicing can be. When learning new music, or when learning a new instrument, it is extremely easy to become frustrated and discouraged by only seeing what you presently can’t do or how much you haven’t done, losing track and losing perspective on all of the progress you’ve in fact already been making this whole time. This web app aims to help music learners learn better by better keeping track and keeping perspective on their progress.</p>
-          <p>&emsp;The app was built using a React.js front-end and a Node.js back-end. I used this project as an opportunity to explore data manipulation in-depth, especially with regards to the use of back-end endpoints and how the back-end should serve the data for the many different ways it is to be displayed and/or visualised in the front-end. I chose Chart.js as a data visualisation library, and found it to be robust and a great visual addition to the app. In order to improve the UX, I also made use of the Wikimedia API for an “autocorrect” feature and Moment.js for date manipulation.</p>
-          <p>&emsp;Of all the projects I have done at GA, I feel that this is my strongest. With two developer friends, I am planning to take this project further through more complex gamification and potentially a “teacher portal” feature where a music teacher can log in to monitor their students’ progress.</p>
+          <h2>Built Using:</h2>
+          <div class="portfolio-item-technology-list"></div>
+          <h2>Description:</h2>
+          <div class="portfolio-item-description"></div>
         </div>
       </div>
+    </section>
+    <section class="contact" hidden>
+      <div>some contact content</div>
     </section>
     <script type="text/javascript" src="./js/app.js"></script>
   </body>

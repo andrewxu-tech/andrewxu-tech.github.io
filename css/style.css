@@ -46,6 +46,12 @@ i {
 a {
   color: inherit; }
 
+code {
+  background-color: #e0e0e0;
+  font-family: 'Courier New', serif;
+  padding: 0 3px;
+  border-radius: 5px; }
+
 body header {
   margin: 0 auto;
   position: relative;
@@ -261,17 +267,17 @@ section.portfolio {
       left: 0px;
       top: 40px;
       width: calc(100vw - 500px);
-      height: 100vh;
+      height: 90vh;
       display: flex;
       flex-wrap: nowrap;
-      padding: 2.5% 0 0 0; }
+      margin: 5% 0 0 0; }
       section.portfolio .portfolio-item-details .carousel-container .arrow {
         width: 20%;
         height: 100%;
         text-align: center;
         font-size: 48px; }
         section.portfolio .portfolio-item-details .carousel-container .arrow i {
-          color: white;
+          color: black;
           cursor: pointer;
           position: relative;
           top: 50%;
@@ -279,7 +285,7 @@ section.portfolio {
           width: 50px;
           height: 50px;
           border-radius: 50%;
-          background-color: black;
+          background-color: white;
           font-size: 36px;
           padding-top: 8px; }
       section.portfolio .portfolio-item-details .carousel-container .carousel-images {
@@ -312,10 +318,22 @@ section.portfolio {
             top: 50%;
             left: 50%;
             transform: translateY(-50%) translateX(-50%); }
-    section.portfolio .portfolio-item-details .portfolio-item-title {
+    section.portfolio .portfolio-item-details .portfolio-item-title-container {
+      width: calc(100vw - 500px);
       color: white;
-      font-size: 48px;
-      margin: 30px; }
+      display: flex; }
+      section.portfolio .portfolio-item-details .portfolio-item-title-container * {
+        flex: 0 0 45%; }
+      section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-title {
+        font-size: 48px;
+        margin: 30px; }
+      section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-link {
+        font-size: 40px;
+        margin: 40px 0 0 0;
+        text-align: right;
+        cursor: pointer; }
+        section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-link a {
+          text-decoration: underline; }
     section.portfolio .portfolio-item-details .portfolio-item-info {
       border-top-left-radius: 30px;
       position: absolute;
@@ -326,10 +344,24 @@ section.portfolio {
       background-color: white;
       padding: 15px;
       font-size: 20px;
-      overflow-y: scroll; }
+      overflow-y: scroll;
+      padding-bottom: 50px; }
       section.portfolio .portfolio-item-details .portfolio-item-info h2 {
         margin: 0;
         font-size: 28px; }
+      section.portfolio .portfolio-item-details .portfolio-item-info .portfolio-item-technology-list {
+        display: flex;
+        background-color: black;
+        border-radius: 30px;
+        margin: 15px 0;
+        color: white;
+        padding: 15px;
+        align-content: space-around;
+        flex-wrap: wrap;
+        line-height: 2em; }
+        section.portfolio .portfolio-item-details .portfolio-item-info .portfolio-item-technology-list div {
+          flex: 0 0 33%;
+          text-align: center; }
 
 section.bio-cv {
   margin: 150px auto;
