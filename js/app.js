@@ -278,7 +278,7 @@ function titleScroll() {
   window.setTimeout(() => {
     portfolioItemDiv.setAttribute('hidden', true);
     portfolioItemDiv.classList.remove('fade-out');
-  }, 500);
+  }, 490);
 });
 
 function offset(el) {
