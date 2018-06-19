@@ -37,7 +37,9 @@ function fadeUpAndIn() {
 
 [...document.getElementsByClassName('nav-arrow')].forEach(element => {
   element.addEventListener('click', () => {
-    if (!window.scrollY) {
+    if (element.classList[1] === 'back-to-top') {
+      window.smoothScrollTo(0, 0, 1500);
+    } else if (!window.scrollY) {
       [...document.getElementsByTagName('section')].forEach(sectionElement => {
         sectionElement.classList.add('hidden');
       });
@@ -48,7 +50,6 @@ function fadeUpAndIn() {
         sectionElement.classList.add('fade-out');
       });
       window.setTimeout(() => {
-        console.log('inside setinterval');
         [...document.getElementsByTagName('section')].forEach(sectionElement => {
           sectionElement.classList.remove('fade-out');
           sectionElement.classList.add('hidden');

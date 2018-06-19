@@ -514,6 +514,10 @@ section.contact {
       font-size: 24px;
       width: 80%;
       font-weight: 200; }
+    section.contact .contact-content a {
+      text-decoration: none; }
+      section.contact .contact-content a :hover {
+        color: grey; }
     section.contact .contact-content div {
       width: 100%;
       text-align: right;
@@ -530,5 +534,35 @@ section.contact {
         text-align: center;
         display: inline-block;
         width: 15px; }
+
+footer {
+  margin-top: 100px; }
+  footer div {
+    margin: 30px 0; }
+  footer .nav-arrow {
+    width: 100%;
+    text-align: center;
+    cursor: pointer; }
+    footer .nav-arrow h2 {
+      margin: 0; }
+    footer .nav-arrow i {
+      font-size: 48px; }
+  footer .links {
+    width: 100%;
+    text-align: center; }
+    footer .links i {
+      margin: 20px;
+      font-size: 48px; }
+  footer .small-print {
+    font-size: 22px;
+    width: 100%;
+    text-align: center; }
+  footer .footer-image {
+    margin: 0;
+    height: 300px;
+    background-image: url("../assets/images/scrawls-footer.png");
+    background-position: center;
+    background-position: none;
+    background-size: 100%; }
 
 /*# sourceMappingURL=style.css.map */
