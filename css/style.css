@@ -506,6 +506,14 @@ section.contact {
     font-size: 36px;
     padding: 40px;
     border-radius: 60px; }
+    section.contact .contact-content p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 40px;
+      font-size: 24px;
+      width: 80%;
+      font-weight: 200; }
     section.contact .contact-content div {
       width: 100%;
       text-align: right;

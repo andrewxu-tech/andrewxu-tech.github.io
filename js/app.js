@@ -37,11 +37,30 @@ function fadeUpAndIn() {
 
 [...document.getElementsByClassName('nav-arrow')].forEach(element => {
   element.addEventListener('click', () => {
-    [...document.getElementsByTagName('section')].forEach(element => {
-      element.classList.add('hidden');
-    });
-    document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
-    window.smoothScrollTo(0, 1000, 1500);
+    if (!window.scrollY) {
+      [...document.getElementsByTagName('section')].forEach(sectionElement => {
+        sectionElement.classList.add('hidden');
+      });
+      document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
+      window.smoothScrollTo(0, 1000, 1500);
+    } else {
+      [...document.getElementsByTagName('section')].forEach(sectionElement => {
+        sectionElement.classList.add('fade-out');
+      });
+      window.setTimeout(() => {
+        console.log('inside setinterval');
+        [...document.getElementsByTagName('section')].forEach(sectionElement => {
+          sectionElement.classList.remove('fade-out');
+          sectionElement.classList.add('hidden');
+        });
+        document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
+        document.getElementsByClassName(element.classList[1])[1].classList.add('fade-in');
+        window.smoothScrollTo(0, 1000, 1500);
+      }, 490);
+      window.setTimeout(() => {
+        document.getElementsByClassName(element.classList[1])[1].classList.remove('fade-in');
+      }, 990);
+    }
   });
 });
 
