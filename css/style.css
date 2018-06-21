@@ -416,9 +416,9 @@ section.bio-cv {
     background-color: white;
     color: black; }
   section.bio-cv .skills div.skills-list {
-    background-color: black;
-    color: white;
-    padding: 30px 30px 300px 30px; }
+    background-color: white;
+    color: black;
+    padding: 30px 30px 150px 30px; }
     section.bio-cv .skills div.skills-list.experience-education-details {
       padding: 30px; }
     section.bio-cv .skills div.skills-list div.experience-educational-details-inner {
@@ -483,7 +483,7 @@ section.bio-cv {
           width: 100%;
           bottom: 0; }
   section.bio-cv .experience-education {
-    background-color: black;
+    background-color: white;
     width: 100%;
     max-width: 100%; }
 
