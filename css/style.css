@@ -67,6 +67,17 @@ body header {
     display: block;
     width: 865px;
     height: 450px; }
+    @media only screen and (max-width: 1024px) {
+      body header div.logo {
+        width: calc(865px / 1.5);
+        height: calc(450px / 1.5); } }
+    @media only screen and (max-width: 480px) {
+      body header div.logo {
+        width: calc(865px / 3);
+        height: calc(450px / 3); } }
+    @media only screen and (max-width: 480px) {
+      body header div.logo .job {
+        margin-left: calc(-30px / 3); } }
     body header div.logo .job .type-of-developer {
       animation: typeofdeveloperanimation 4s infinite; }
     body header div.logo .job .fade-after-4-secs {
@@ -75,6 +86,12 @@ body header {
       animation: fadein 4s; }
     body header div.logo .job h1 {
       margin-left: -30px; }
+      @media only screen and (max-width: 1024px) {
+        body header div.logo .job h1 {
+          margin-left: calc(-30px / 1.5); } }
+      @media only screen and (max-width: 480px) {
+        body header div.logo .job h1 {
+          margin-left: calc(-30px / 3); } }
 @keyframes typeofdeveloperanimation {
   0% {
     color: transparent; }
@@ -103,6 +120,12 @@ body header {
       background-color: black;
       color: white;
       border-radius: 90px; }
+      @media only screen and (max-width: 1024px) {
+        body header div.logo .name {
+          border-radius: calc(90px / 1.5); } }
+      @media only screen and (max-width: 480px) {
+        body header div.logo .name {
+          border-radius: calc(90px / 3); } }
       body header div.logo .name h1 {
         text-align: right; }
     body header div.logo div {
@@ -111,12 +134,31 @@ body header {
       width: 400px;
       padding: 15px;
       font-size: 44px; }
+      @media only screen and (max-width: 1024px) {
+        body header div.logo div {
+          height: calc(400px / 1.5);
+          width: calc(400px / 1.5);
+          font-size: calc(44px / 1.5); } }
+      @media only screen and (max-width: 480px) {
+        body header div.logo div {
+          height: calc(400px / 3);
+          width: calc(400px / 3);
+          font-size: calc(44px / 3); } }
       body header div.logo div h1 {
         position: absolute;
         bottom: 0%;
         line-height: 1em;
         width: 380px;
         padding: 30px; }
+        @media only screen and (max-width: 1024px) {
+          body header div.logo div h1 {
+            width: calc(380px / 1.5);
+            padding: calc(30px / 1.5); } }
+        @media only screen and (max-width: 480px) {
+          body header div.logo div h1 {
+            margin-left: -10px;
+            width: calc(380px / 3);
+            padding: calc(30px / 3); } }
   body header .scroll-down {
     width: 100%;
     text-align: center;
