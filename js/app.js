@@ -96,10 +96,7 @@ function titleScroll() {
 });
 
 [...document.getElementsByTagName('img')].forEach(element => {
-  while (!element.complete) {
-    console.log('loading');
-  }
-  console.log('loaded');
+  console.log(element.complete);
   element.src = `./assets/images/portfolio/${element.classList[0]}/1.png`;
   let currentImage = 1;
   [...document.getElementsByClassName('arrow')].forEach(element => {
