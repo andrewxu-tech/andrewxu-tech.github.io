@@ -295,6 +295,9 @@ section.portfolio {
     section.portfolio .portfolio-item h2 {
       margin: 0;
       font-size: 36px; }
+      @media only screen and (max-width: 1024px) and (orientation: portrait) {
+        section.portfolio .portfolio-item h2 {
+          font-size: 32px; } }
       section.portfolio .portfolio-item h2 span {
         float: right;
         margin: 0 50px; }
