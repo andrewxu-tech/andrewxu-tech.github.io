@@ -231,7 +231,7 @@ section.portfolio {
   height: 100vh;
   display: flex;
   flex-wrap: wrap; }
-  @media only screen and (max-width: 1024px) and (orientation: portrait) {
+  @media only screen and (max-width: 1366px) and (orientation: portrait) {
     section.portfolio {
       margin: 150px 0;
       height: 800px; } }
@@ -295,12 +295,18 @@ section.portfolio {
     section.portfolio .portfolio-item h2 {
       margin: 0;
       font-size: 36px; }
-      @media only screen and (max-width: 1024px) and (orientation: portrait) {
+      @media only screen and (max-width: 1366px) {
         section.portfolio .portfolio-item h2 {
           font-size: 32px; } }
+      @media only screen and (max-width: 1024px) and (orientation: portrait) {
+        section.portfolio .portfolio-item h2 {
+          font-size: 28px; } }
       section.portfolio .portfolio-item h2 span {
         float: right;
         margin: 0 50px; }
+        @media only screen and (max-width: 1024px) and (orientation: portrait) {
+          section.portfolio .portfolio-item h2 span {
+            margin: 0; } }
         section.portfolio .portfolio-item h2 span i {
           cursor: pointer; }
   section.portfolio .portfolio-item-details {
@@ -312,6 +318,9 @@ section.portfolio {
     background-color: black;
     position: fixed;
     z-index: 2; }
+    @media only screen and (max-width: 1366px) {
+      section.portfolio .portfolio-item-details {
+        overflow-y: scroll; } }
     section.portfolio .portfolio-item-details .portfolio-item-close {
       position: absolute;
       right: 0;
@@ -335,7 +344,7 @@ section.portfolio {
       display: flex;
       flex-wrap: nowrap;
       margin: 5% 0 0 0; }
-      @media only screen and (max-width: 1024px) and (orientation: portrait) {
+      @media only screen and (max-width: 1366px) {
         section.portfolio .portfolio-item-details .carousel-container {
           width: 100%;
           height: 600px; } }
@@ -390,7 +399,7 @@ section.portfolio {
       width: calc(100vw - 500px);
       color: white;
       display: flex; }
-      @media only screen and (max-width: 1024px) and (orientation: portrait) {
+      @media only screen and (max-width: 1366px) {
         section.portfolio .portfolio-item-details .portfolio-item-title-container {
           width: 90%; } }
       section.portfolio .portfolio-item-details .portfolio-item-title-container * {
@@ -398,11 +407,17 @@ section.portfolio {
       section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-title {
         font-size: 48px;
         margin: 30px; }
+        @media only screen and (max-width: 1024px) and (orientation: portrait) {
+          section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-title {
+            font-size: 36px; } }
       section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-link {
         font-size: 40px;
         margin: 40px 0 0 0;
         text-align: right;
         cursor: pointer; }
+        @media only screen and (max-width: 1024px) and (orientation: portrait) {
+          section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-link {
+            font-size: 32px; } }
         section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-link a {
           text-decoration: underline; }
     section.portfolio .portfolio-item-details .portfolio-item-info {
@@ -417,7 +432,7 @@ section.portfolio {
       font-size: 20px;
       overflow-y: scroll;
       padding-bottom: 50px; }
-      @media only screen and (max-width: 1024px) and (orientation: portrait) {
+      @media only screen and (max-width: 1366px) {
         section.portfolio .portfolio-item-details .portfolio-item-info {
           width: 100%;
           top: 700px;
@@ -450,11 +465,14 @@ section.bio-cv {
     background-image: url("../assets/images/scrawls.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     position: relative; }
     @media only screen and (max-width: 480px) {
       section.bio-cv .short-bio .background-image {
         margin: 10vh 0; } }
+    @media only screen and (max-width: 1024px) {
+      section.bio-cv .short-bio .background-image {
+        background-size: auto 100%; } }
   section.bio-cv .short-bio .short-bio-container {
     position: absolute;
     left: 0;
@@ -462,6 +480,9 @@ section.bio-cv {
     z-index: 1;
     margin: -800px auto;
     max-width: 800px; }
+    @media only screen and (max-width: 1024px) {
+      section.bio-cv .short-bio .short-bio-container {
+        margin: -850px auto; } }
     section.bio-cv .short-bio .short-bio-container .short-bio-box {
       border-radius: 60px;
       border: 7px solid;
@@ -539,7 +560,7 @@ section.bio-cv {
             background-image: url("../assets/images/ram-logo.jpg"); }
           section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo.lse-logo {
             background-image: url("../assets/images/lse-logo.png"); }
-          @media only screen and (max-width: 1024px) and (orientation: portrait) {
+          @media only screen and (max-width: 1024px) {
             section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo {
               width: 100%;
               margin-bottom: 50px; } }
@@ -562,6 +583,9 @@ section.bio-cv {
         @media only screen and (max-device-width: 1366px) {
           section.bio-cv .skills div.skills-list .skills-container span {
             height: 120px; } }
+        @media only screen and (max-width: 1024px) and (orientation: portrait) {
+          section.bio-cv .skills div.skills-list .skills-container span {
+            flex-basis: calc(100% / 6); } }
         section.bio-cv .skills div.skills-list .skills-container span em {
           font-size: 48px;
           display: block;
@@ -604,6 +628,9 @@ section.contact {
     @media only screen and (max-width: 1024px) and (orientation: portrait) {
       section.contact .contact-content {
         bottom: -100px; } }
+    @media only screen and (max-width: 1024px) and (orientation: portrait) {
+      section.contact .contact-content {
+        margin: 0 50px; } }
     section.contact .contact-content p {
       position: absolute;
       top: 0;
