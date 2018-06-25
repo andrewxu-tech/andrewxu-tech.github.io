@@ -226,6 +226,10 @@ section.portfolio {
   height: 100vh;
   display: flex;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 1024px) and (orientation: portrait) {
+    section.portfolio {
+      margin: 150px 0;
+      height: 800px; } }
   section.portfolio .portfolio-item {
     width: 50%;
     height: 50%;
@@ -443,9 +447,6 @@ section.bio-cv {
         font-size: 36px;
         margin: 15px;
         font-weight: 800; }
-        @media only screen and (max-width: 1024px) {
-          section.bio-cv .short-bio .short-bio-container .short-bio-box h2 {
-            font-size: calc(36px / 1.5); } }
         @media only screen and (max-width: 480px) {
           section.bio-cv .short-bio .short-bio-container .short-bio-box h2 {
             font-size: calc(36px / 1.5); } }
@@ -455,9 +456,6 @@ section.bio-cv {
         font-weight: 600;
         line-height: 2em;
         text-align: justify; }
-        @media only screen and (max-width: 1024px) {
-          section.bio-cv .short-bio .short-bio-container .short-bio-box p {
-            font-size: calc(22px / 1.5); } }
         @media only screen and (max-width: 480px) {
           section.bio-cv .short-bio .short-bio-container .short-bio-box p {
             font-size: calc(22px / 1.2); } }
@@ -561,6 +559,10 @@ section.contact {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat; }
+  @media only screen and (max-width: 1024px) and (orientation: portrait) {
+    section.contact {
+      margin: 150px 0;
+      height: 800px; } }
   section.contact .contact-content {
     background-color: white;
     max-width: 960px;
@@ -571,6 +573,9 @@ section.contact {
     font-size: 36px;
     padding: 40px;
     border-radius: 60px; }
+    @media only screen and (max-width: 1024px) and (orientation: portrait) {
+      section.contact .contact-content {
+        bottom: -100px; } }
     section.contact .contact-content p {
       position: absolute;
       top: 0;
