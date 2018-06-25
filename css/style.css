@@ -8,6 +8,9 @@ body {
 
 .fade-up-and-in-animation {
   animation: fadeUpAndIn 1.5s; }
+  @media only screen and (max-width: 450px) {
+    .fade-up-and-in-animation {
+      animation: none; } }
 
 @keyframes fadeUpAndIn {
   0% {
@@ -586,6 +589,9 @@ section.bio-cv {
         @media only screen and (max-width: 1024px) and (orientation: portrait) {
           section.bio-cv .skills div.skills-list .skills-container span {
             flex-basis: calc(100% / 6); } }
+        @media only screen and (max-width: 450px) and (orientation: portrait) {
+          section.bio-cv .skills div.skills-list .skills-container span {
+            flex-basis: calc(100% / 3); } }
         section.bio-cv .skills div.skills-list .skills-container span em {
           font-size: 48px;
           display: block;
