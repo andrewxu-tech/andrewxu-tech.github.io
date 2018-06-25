@@ -37,13 +37,13 @@ function fadeUpAndIn() {
 
 [...document.getElementsByClassName('nav-arrow')].forEach(element => {
   element.addEventListener('click', () => {
+    const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     if (element.classList[1] === 'back-to-top') {
       window.smoothScrollTo(0, 0, 1500);
     } else if (!window.scrollY) {
       [...document.getElementsByTagName('section')].forEach(sectionElement => {
         sectionElement.classList.add('hidden');
       });
-      const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
       document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
       window.smoothScrollTo(0, viewportHeight * 1.1, 1500);
     } else {
@@ -57,7 +57,7 @@ function fadeUpAndIn() {
         });
         document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
         document.getElementsByClassName(element.classList[1])[1].classList.add('fade-in');
-        window.smoothScrollTo(0, 1000, 1500);
+        window.smoothScrollTo(0, viewportHeight * 1.1, 1500);
       }, 490);
       window.setTimeout(() => {
         document.getElementsByClassName(element.classList[1])[1].classList.remove('fade-in');

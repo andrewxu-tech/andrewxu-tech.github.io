@@ -67,15 +67,15 @@ body header {
     display: block;
     width: 865px;
     height: 450px; }
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-device-width: 1024px) {
       body header div.logo {
         width: calc(865px / 1.5);
         height: calc(450px / 1.5); } }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-device-width: 480px) {
       body header div.logo {
         width: calc(865px / 3);
         height: calc(450px / 3); } }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-device-width: 480px) {
       body header div.logo .job {
         margin-left: calc(-30px / 3); } }
     body header div.logo .job .type-of-developer {
@@ -86,10 +86,10 @@ body header {
       animation: fadein 4s; }
     body header div.logo .job h1 {
       margin-left: -30px; }
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-device-width: 1024px) {
         body header div.logo .job h1 {
           margin-left: calc(-30px / 1.5); } }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-device-width: 480px) {
         body header div.logo .job h1 {
           margin-left: calc(-30px / 3); } }
 @keyframes typeofdeveloperanimation {
@@ -120,10 +120,10 @@ body header {
       background-color: black;
       color: white;
       border-radius: 90px; }
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-device-width: 1024px) {
         body header div.logo .name {
           border-radius: calc(90px / 1.5); } }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-device-width: 480px) {
         body header div.logo .name {
           border-radius: calc(90px / 3); } }
       body header div.logo .name h1 {
@@ -134,12 +134,12 @@ body header {
       width: 400px;
       padding: 15px;
       font-size: 44px; }
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-device-width: 1024px) {
         body header div.logo div {
           height: calc(400px / 1.5);
           width: calc(400px / 1.5);
           font-size: calc(44px / 1.5); } }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-device-width: 480px) {
         body header div.logo div {
           height: calc(400px / 3);
           width: calc(400px / 3);
@@ -150,11 +150,11 @@ body header {
         line-height: 1em;
         width: 380px;
         padding: 30px; }
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-device-width: 1024px) {
           body header div.logo div h1 {
             width: calc(380px / 1.5);
             padding: calc(30px / 1.5); } }
-        @media only screen and (max-width: 480px) {
+        @media only screen and (max-device-width: 480px) {
           body header div.logo div h1 {
             margin-left: -10px;
             width: calc(380px / 3);
@@ -419,6 +419,9 @@ section.bio-cv {
     background-repeat: no-repeat;
     background-position: center center;
     position: relative; }
+    @media only screen and (max-width: 480px) {
+      section.bio-cv .short-bio .background-image {
+        margin: 10vh 0; } }
   section.bio-cv .short-bio .short-bio-container {
     position: absolute;
     left: 0;
