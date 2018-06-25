@@ -43,8 +43,9 @@ function fadeUpAndIn() {
       [...document.getElementsByTagName('section')].forEach(sectionElement => {
         sectionElement.classList.add('hidden');
       });
+      const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
       document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
-      window.smoothScrollTo(0, 1000, 1500);
+      window.smoothScrollTo(0, viewportHeight * 1.1, 1500);
     } else {
       [...document.getElementsByTagName('section')].forEach(sectionElement => {
         sectionElement.classList.add('fade-out');

@@ -413,7 +413,7 @@ section.bio-cv {
   position: relative; }
   section.bio-cv .short-bio .background-image {
     height: 700px;
-    margin-bottom: 150px;
+    margin: 200px 0 250px 0;
     background-image: url("../assets/images/scrawls.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -424,7 +424,7 @@ section.bio-cv {
     left: 0;
     right: 0;
     z-index: 100;
-    margin: -700px auto;
+    margin: -800px auto;
     max-width: 800px; }
     section.bio-cv .short-bio .short-bio-container .short-bio-box {
       border-radius: 60px;
@@ -435,12 +435,24 @@ section.bio-cv {
         font-size: 36px;
         margin: 15px;
         font-weight: 800; }
+        @media only screen and (max-width: 1024px) {
+          section.bio-cv .short-bio .short-bio-container .short-bio-box h2 {
+            font-size: calc(36px / 1.5); } }
+        @media only screen and (max-width: 480px) {
+          section.bio-cv .short-bio .short-bio-container .short-bio-box h2 {
+            font-size: calc(36px / 1.5); } }
       section.bio-cv .short-bio .short-bio-container .short-bio-box p {
         font-size: 22px;
         margin: 0;
         font-weight: 600;
         line-height: 2em;
         text-align: justify; }
+        @media only screen and (max-width: 1024px) {
+          section.bio-cv .short-bio .short-bio-container .short-bio-box p {
+            font-size: calc(22px / 1.5); } }
+        @media only screen and (max-width: 480px) {
+          section.bio-cv .short-bio .short-bio-container .short-bio-box p {
+            font-size: calc(22px / 1.2); } }
   section.bio-cv .skills h2 {
     font-size: 36px;
     font-weight: 800;
@@ -460,7 +472,7 @@ section.bio-cv {
   section.bio-cv .skills div.skills-list {
     background-color: white;
     color: black;
-    padding: 30px 30px 150px 30px; }
+    padding: 30px 30px 200px 30px; }
     section.bio-cv .skills div.skills-list.experience-education-details {
       padding: 30px; }
     section.bio-cv .skills div.skills-list div.experience-educational-details-inner {
