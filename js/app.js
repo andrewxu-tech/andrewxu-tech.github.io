@@ -163,6 +163,7 @@ function titleScroll() {
   element.addEventListener('click', () => {
     const portfolioItemDiv = document.getElementsByClassName('portfolio-item-details')[0];
     portfolioItemDiv.removeAttribute('hidden');
+    document.getElementsByTagName('html')[0].classList.add('disable-scroll');
     if (element.classList[1] === 'poco-a-poco') {
       [...document.getElementsByClassName('portfolio-item-name-replace')].forEach(portfolioItemElement => {
         portfolioItemElement.classList.replace('portfolio-item-name', 'poco-a-poco');
@@ -278,6 +279,7 @@ function titleScroll() {
 
 [...document.getElementsByClassName('portfolio-item-close')][0].addEventListener('click', () => {
   const portfolioItemDiv = document.getElementsByClassName('portfolio-item-details')[0];
+  document.getElementsByTagName('html')[0].classList.remove('disable-scroll');
   portfolioItemDiv.classList.add('fade-out');
   window.setTimeout(() => {
     portfolioItemDiv.setAttribute('hidden', true);

@@ -55,6 +55,11 @@ code {
 .hidden {
   display: none !important; }
 
+.disable-scroll {
+  margin: 0;
+  height: 100%;
+  overflow: hidden; }
+
 body header {
   margin: 0 auto;
   position: relative;
@@ -301,7 +306,9 @@ section.portfolio {
     left: 0px;
     height: 105vh;
     width: 100vw;
-    background-color: black; }
+    background-color: black;
+    position: fixed;
+    z-index: 2; }
     section.portfolio .portfolio-item-details .portfolio-item-close {
       position: absolute;
       right: 0;
@@ -325,6 +332,10 @@ section.portfolio {
       display: flex;
       flex-wrap: nowrap;
       margin: 5% 0 0 0; }
+      @media only screen and (max-width: 1024px) and (orientation: portrait) {
+        section.portfolio .portfolio-item-details .carousel-container {
+          width: 100%;
+          height: 600px; } }
       section.portfolio .portfolio-item-details .carousel-container .arrow {
         width: 20%;
         height: 100%;
@@ -376,6 +387,9 @@ section.portfolio {
       width: calc(100vw - 500px);
       color: white;
       display: flex; }
+      @media only screen and (max-width: 1024px) and (orientation: portrait) {
+        section.portfolio .portfolio-item-details .portfolio-item-title-container {
+          width: 90%; } }
       section.portfolio .portfolio-item-details .portfolio-item-title-container * {
         flex: 0 0 45%; }
       section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-title {
@@ -400,6 +414,13 @@ section.portfolio {
       font-size: 20px;
       overflow-y: scroll;
       padding-bottom: 50px; }
+      @media only screen and (max-width: 1024px) and (orientation: portrait) {
+        section.portfolio .portfolio-item-details .portfolio-item-info {
+          width: 100%;
+          top: 700px;
+          height: 700px;
+          overflow-y: scroll;
+          padding-bottom: 100px; } }
       section.portfolio .portfolio-item-details .portfolio-item-info h2 {
         margin: 0;
         font-size: 28px; }
@@ -435,7 +456,7 @@ section.bio-cv {
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 1;
     margin: -800px auto;
     max-width: 800px; }
     section.bio-cv .short-bio .short-bio-container .short-bio-box {
@@ -515,6 +536,10 @@ section.bio-cv {
             background-image: url("../assets/images/ram-logo.jpg"); }
           section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo.lse-logo {
             background-image: url("../assets/images/lse-logo.png"); }
+          @media only screen and (max-width: 1024px) and (orientation: portrait) {
+            section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo {
+              width: 100%;
+              margin-bottom: 50px; } }
       section.bio-cv .skills div.skills-list .skills-container p {
         font-size: 22px;
         margin-bottom: 100px;
