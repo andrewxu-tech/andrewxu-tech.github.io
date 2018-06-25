@@ -528,6 +528,9 @@ section.bio-cv {
         font-size: 22px;
         margin: 0 0 40px 0;
         position: relative; }
+        @media only screen and (max-device-width: 1366px) {
+          section.bio-cv .skills div.skills-list .skills-container span {
+            height: 120px; } }
         section.bio-cv .skills div.skills-list .skills-container span em {
           font-size: 48px;
           display: block;
