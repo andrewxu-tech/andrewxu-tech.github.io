@@ -254,6 +254,9 @@ body .content-nav-arrow {
   margin: 150px 0 -50px 30px;
   font-weight: 800;
   font-size: 36px; }
+  @media only screen and (max-width: 480px) {
+    .section-title-projects {
+      margin: 70px 0 -50px 30px; } }
 
 section.portfolio {
   position: relative;
@@ -267,6 +270,7 @@ section.portfolio {
       height: 800px; } }
   @media only screen and (max-width: 480px) {
     section.portfolio {
+      margin: 0;
       height: 1200px; } }
   section.portfolio .portfolio-item {
     width: 50%;
@@ -390,6 +394,9 @@ section.portfolio {
           top: 70px;
           width: 100%;
           height: 400px; } }
+      @media only screen and (max-width: 480px) {
+        section.portfolio .portfolio-item-details .carousel-container {
+          height: 40vh; } }
       section.portfolio .portfolio-item-details .carousel-container .arrow {
         width: 20%;
         height: 100%;
@@ -452,6 +459,9 @@ section.portfolio {
         @media only screen and (max-width: 1024px) and (orientation: portrait) {
           section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-title {
             font-size: 36px; } }
+        @media only screen and (max-width: 480px) {
+          section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-title {
+            font-size: calc(48px / 1.5); } }
       section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-link {
         font-size: 40px;
         margin: 40px 0 0 0;
@@ -460,6 +470,12 @@ section.portfolio {
         @media only screen and (max-width: 1024px) and (orientation: portrait) {
           section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-link {
             font-size: 32px; } }
+        @media only screen and (max-width: 480px) {
+          section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-link {
+            font-size: calc(40px / 1.5);
+            text-align: left;
+            padding-right: 20px;
+            line-height: 1.5em; } }
         section.portfolio .portfolio-item-details .portfolio-item-title-container .portfolio-item-link a {
           text-decoration: underline; }
     section.portfolio .portfolio-item-details .portfolio-item-info {
@@ -483,6 +499,9 @@ section.portfolio {
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
           padding-bottom: 100px; } }
+      @media only screen and (max-width: 480px) {
+        section.portfolio .portfolio-item-details .portfolio-item-info {
+          top: 50vh; } }
       section.portfolio .portfolio-item-details .portfolio-item-info h2 {
         margin: 0;
         font-size: 28px; }
