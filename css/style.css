@@ -575,8 +575,14 @@ section.bio-cv {
       margin: 50px auto;
       display: flex;
       justify-content: space-between; }
+      @media only screen and (max-width: 480px) {
+        section.bio-cv .skills div.skills-list div.experience-educational-details-inner {
+          flex-wrap: wrap; } }
       section.bio-cv .skills div.skills-list div.experience-educational-details-inner .column {
         width: 49%; }
+        @media only screen and (max-width: 480px) {
+          section.bio-cv .skills div.skills-list div.experience-educational-details-inner .column {
+            width: 99%; } }
     section.bio-cv .skills div.skills-list .skills-container {
       display: flex;
       flex-wrap: wrap;
@@ -614,6 +620,9 @@ section.bio-cv {
         margin-bottom: 100px;
         text-indent: 50px;
         display: block; }
+        @media only screen and (max-width: 480px) {
+          section.bio-cv .skills div.skills-list .skills-container p {
+            font-size: calc(22px / 1.2); } }
       section.bio-cv .skills div.skills-list .skills-container li p {
         margin-bottom: 0; }
       section.bio-cv .skills div.skills-list .skills-container span {
@@ -736,6 +745,9 @@ footer {
     font-size: 22px;
     width: 100%;
     text-align: center; }
+    @media only screen and (max-width: 480px) {
+      footer .small-print {
+        font-size: 16px; } }
   footer .footer-image {
     margin: 0;
     height: 300px;
