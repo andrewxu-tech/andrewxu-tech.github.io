@@ -326,7 +326,8 @@ section.portfolio {
     z-index: 2; }
     @media only screen and (max-width: 1366px) {
       section.portfolio .portfolio-item-details {
-        overflow-y: scroll; } }
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch; } }
     section.portfolio .portfolio-item-details .portfolio-item-close {
       position: absolute;
       right: 0;
@@ -437,6 +438,7 @@ section.portfolio {
       padding: 15px;
       font-size: 20px;
       overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
       padding-bottom: 50px; }
       @media only screen and (max-width: 1366px) {
         section.portfolio .portfolio-item-details .portfolio-item-info {
@@ -444,6 +446,7 @@ section.portfolio {
           top: 700px;
           height: 700px;
           overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;
           padding-bottom: 100px; } }
       section.portfolio .portfolio-item-details .portfolio-item-info h2 {
         margin: 0;
