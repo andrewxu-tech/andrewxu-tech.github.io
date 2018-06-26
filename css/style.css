@@ -193,13 +193,25 @@ body header {
       transform: translateY(-10px); }
       body header .scroll-down .nav-arrow.bio-cv {
         animation: fadeinanddown 2s, bobble 2s 6s infinite; }
+        @media only screen and (max-width: 480px) {
+          body header .scroll-down .nav-arrow.bio-cv {
+            animation: bobble 2s 6s infinite; } }
       body header .scroll-down .nav-arrow.portfolio {
         animation: fadeinanddown 2s, bobble 2s 6.2s infinite; }
+        @media only screen and (max-width: 480px) {
+          body header .scroll-down .nav-arrow.portfolio {
+            animation: bobble 2s 6.2s infinite; } }
       body header .scroll-down .nav-arrow.contact {
         animation: fadeinanddown 2s, bobble 2s 6.4s infinite; }
+        @media only screen and (max-width: 480px) {
+          body header .scroll-down .nav-arrow.contact {
+            animation: bobble 2s 6.4s infinite; } }
       body header .scroll-down .nav-arrow h2 {
         margin: 0;
         cursor: pointer; }
+        @media only screen and (max-width: 480px) {
+          body header .scroll-down .nav-arrow h2 {
+            font-size: 18px; } }
       body header .scroll-down .nav-arrow .fas {
         font-size: 48px;
         margin: 0px;
@@ -504,12 +516,12 @@ section.bio-cv {
     z-index: 1;
     margin: -800px auto;
     max-width: 800px; }
-    @media only screen and (max-width: 480px) {
-      section.bio-cv .short-bio .short-bio-container {
-        margin: -100px auto; } }
     @media only screen and (max-width: 1024px) {
       section.bio-cv .short-bio .short-bio-container {
         margin: -850px auto; } }
+    @media only screen and (max-width: 480px) {
+      section.bio-cv .short-bio .short-bio-container {
+        margin: -540px auto; } }
     section.bio-cv .short-bio .short-bio-container .short-bio-box {
       border-radius: 60px;
       border: 7px solid;
