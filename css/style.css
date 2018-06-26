@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+html {
+  overflow-x: none; }
+
 * {
   box-sizing: border-box;
   font-family: 'Dosis', sans-serif; }
@@ -8,7 +11,7 @@ body {
 
 .fade-up-and-in-animation {
   animation: fadeUpAndIn 1.5s; }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 480px) {
     .fade-up-and-in-animation {
       animation: none; } }
 
@@ -472,7 +475,9 @@ section.bio-cv {
     position: relative; }
     @media only screen and (max-width: 480px) {
       section.bio-cv .short-bio .background-image {
-        margin: 10vh 0; } }
+        margin: 10vh 0;
+        background-image: none;
+        height: 400px; } }
     @media only screen and (max-width: 1024px) {
       section.bio-cv .short-bio .background-image {
         background-size: auto 100%; } }
@@ -483,6 +488,9 @@ section.bio-cv {
     z-index: 1;
     margin: -800px auto;
     max-width: 800px; }
+    @media only screen and (max-width: 480px) {
+      section.bio-cv .short-bio .short-bio-container {
+        margin: -100px auto; } }
     @media only screen and (max-width: 1024px) {
       section.bio-cv .short-bio .short-bio-container {
         margin: -850px auto; } }
@@ -504,6 +512,9 @@ section.bio-cv {
         font-weight: 600;
         line-height: 2em;
         text-align: justify; }
+        @media only screen and (max-width: 480px) {
+          section.bio-cv .short-bio .short-bio-container .short-bio-box p {
+            line-height: 1.5em; } }
         @media only screen and (max-width: 480px) {
           section.bio-cv .short-bio .short-bio-container .short-bio-box p {
             font-size: calc(22px / 1.2); } }
