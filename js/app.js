@@ -180,7 +180,7 @@ function titleScroll() {
         linkElement.setAttribute('href', 'https://poco-a-poco.herokuapp.com/');
       });
       const carouselImageElement = document.getElementsByClassName('large-carousel-image')[0];
-      carouselImageElement.src = './assets/images/portfolio/poco-a-poco/1.png';
+      carouselImageElement.src = './assets/images/portfolio/poco-a-poco/2.png';
       document.getElementsByClassName('portfolio-item-technology-list')[0].innerHTML = `
       <div><em class="icon-react"></em>&nbsp;ReactJS</div>
       <div><em class="icon-nodejs"></em>&nbsp;Node.js</div>
@@ -207,7 +207,7 @@ function titleScroll() {
         linkElement.setAttribute('href', 'http://andrewxu.tech/keyboard-warrior/');
       });
       const carouselImageElement = document.getElementsByClassName('large-carousel-image')[0];
-      carouselImageElement.src = './assets/images/portfolio/keyboard-warrior/1.png';
+      carouselImageElement.src = './assets/images/portfolio/keyboard-warrior/2.png';
       document.getElementsByClassName('portfolio-item-technology-list')[0].innerHTML = `
         <div><em class="icon-html5"></em>&nbsp;HTML5</div>
       <div><em class="icon-css3"></em>&nbsp;CSS3</div>
@@ -235,7 +235,7 @@ function titleScroll() {
         linkElement.setAttribute('href', 'https://turtle-to-do.herokuapp.com/');
       });
       const carouselImageElement = document.getElementsByClassName('large-carousel-image')[0];
-      carouselImageElement.src = './assets/images/portfolio/turtle-todo/1.png';
+      carouselImageElement.src = './assets/images/portfolio/turtle-todo/2.png';
       document.getElementsByClassName('portfolio-item-technology-list')[0].innerHTML = `
       <div><em class="icon-angularjs"></em>&nbsp;AngularJS</div>
       <div><em class="icon-nodejs"></em>&nbsp;Node.js</div>
@@ -259,7 +259,7 @@ function titleScroll() {
         linkElement.setAttribute('href', 'https://sino-review.herokuapp.com/');
       });
       const carouselImageElement = document.getElementsByClassName('large-carousel-image')[0];
-      carouselImageElement.src = './assets/images/portfolio/sino/1.png';
+      carouselImageElement.src = './assets/images/portfolio/sino/2.png';
       document.getElementsByClassName('portfolio-item-technology-list')[0].innerHTML = `
       <div><em class="icon-nodejs"></em>&nbsp;Node.js</div>
       <div><em class="icon-css3"></em>&nbsp;CSS3</div>
