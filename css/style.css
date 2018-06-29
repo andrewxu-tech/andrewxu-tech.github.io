@@ -707,6 +707,10 @@ section.contact {
     section.contact {
       margin: 150px 0;
       height: 800px; } }
+  @media only screen and (max-width: 480px) {
+    section.contact {
+      margin: 70px 0;
+      height: 1000px; } }
   section.contact .contact-content {
     background-color: white;
     max-width: 960px;
@@ -719,10 +723,13 @@ section.contact {
     border-radius: 60px; }
     @media only screen and (max-width: 1024px) and (orientation: portrait) {
       section.contact .contact-content {
-        bottom: -100px; } }
-    @media only screen and (max-width: 1024px) and (orientation: portrait) {
-      section.contact .contact-content {
+        bottom: -100px;
         margin: 0 50px; } }
+    @media only screen and (max-width: 480px) {
+      section.contact .contact-content {
+        margin: 0 10px;
+        height: 440px;
+        font-size: 20px; } }
     section.contact .contact-content p {
       position: absolute;
       top: 0;
@@ -731,6 +738,10 @@ section.contact {
       font-size: 24px;
       width: 80%;
       font-weight: 200; }
+      @media only screen and (max-width: 480px) {
+        section.contact .contact-content p {
+          width: 100%;
+          font-size: 20px; } }
     section.contact .contact-content a {
       text-decoration: none; }
       section.contact .contact-content a :hover {
@@ -743,6 +754,9 @@ section.contact {
       section.contact .contact-content div .small-light {
         font-size: 26px;
         font-weight: 100; }
+        @media only screen and (max-width: 480px) {
+          section.contact .contact-content div .small-light {
+            font-size: 20px; } }
       section.contact .contact-content div .bold-name {
         font-weight: 800; }
       section.contact .contact-content div .semi-bold {
@@ -781,8 +795,12 @@ footer {
     margin: 0;
     height: 300px;
     background-image: url("../assets/images/scrawls-footer.png");
-    background-position: center;
     background-position: none;
     background-size: 100%; }
+    @media only screen and (max-width: 480px) {
+      footer .footer-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 700px; } }
 
 /*# sourceMappingURL=style.css.map */
