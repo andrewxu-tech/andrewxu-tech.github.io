@@ -100,7 +100,7 @@ function titleScroll() {
 });
 
 [...document.getElementsByTagName('img')].forEach(element => {
-  element.src = `./assets/images/portfolio/${element.classList[0]}/1.png`;
+  element.src = `./assets/images/portfolio/${element.classList[0]}/1.gif`;
   let currentImage = 1;
   [...document.getElementsByClassName('arrow')].forEach(element => {
     if (element.classList[1] === 'left-arrow') {
@@ -113,17 +113,20 @@ function titleScroll() {
       element.addEventListener('click', () => {
         let maxImages = null;
         if (element.classList[2] === 'poco-a-poco') {
-          maxImages = 7;
+          maxImages = 8;
         } else if (element.classList[2] === 'keyboard-warrior') {
-          maxImages = 4;
+          maxImages = 5;
         } else if (element.classList[2] === 'turtle-todo') {
-          maxImages = 3;
-        } else if (element.classList[2] === 'sino') {
           maxImages = 4;
+        } else if (element.classList[2] === 'sino') {
+          maxImages = 5;
         }
         if (currentImage === 1) {
           imageElement.src = `./assets/images/portfolio/${element.classList[2]}/${maxImages}.png`;
           currentImage = maxImages;
+        } else if (currentImage === 2) {
+          imageElement.src = `./assets/images/portfolio/${element.classList[2]}/1.gif`;
+          currentImage = 1;
         } else {
           imageElement.src = `./assets/images/portfolio/${element.classList[2]}/${currentImage - 1}.png`;
           currentImage -= 1;
@@ -148,7 +151,7 @@ function titleScroll() {
           maxImages = 4;
         }
         if (currentImage >= maxImages) {
-          imageElement.src = `./assets/images/portfolio/${element.classList[2]}/1.png`;
+          imageElement.src = `./assets/images/portfolio/${element.classList[2]}/1.gif`;
           currentImage = 1;
         } else {
           imageElement.src = `./assets/images/portfolio/${element.classList[2]}/${currentImage + 1}.png`;
