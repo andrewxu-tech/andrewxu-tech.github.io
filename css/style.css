@@ -81,7 +81,7 @@ code {
 body header {
   margin: 0 auto;
   position: relative;
-  height: 101vh; }
+  height: 100vh; }
   body header div.logo {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -189,8 +189,15 @@ body header {
     bottom: 0; }
     body header .scroll-down .nav-arrow {
       display: inline-block;
-      width: 33%;
-      transform: translateY(-10px); }
+      width: 13%;
+      transform: translateY(-10px);
+      margin: 30px 10%;
+      padding: 5px;
+      border: 0px solid black;
+      border-radius: 50px; }
+      @media only screen and (max-width: 480px) {
+        body header .scroll-down .nav-arrow {
+          margin-bottom: 30px; } }
       body header .scroll-down .nav-arrow.bio-cv {
         animation: fadeinanddown 2s, bobble 2s 6s infinite; }
         @media only screen and (max-width: 480px) {
@@ -249,14 +256,6 @@ body .content-nav-arrow {
     font-size: 48px;
     margin: 0px;
     cursor: pointer; }
-
-.section-title-projects {
-  margin: 150px 0 -50px 30px;
-  font-weight: 800;
-  font-size: 36px; }
-  @media only screen and (max-width: 480px) {
-    .section-title-projects {
-      margin: 70px 0 -50px 30px; } }
 
 section.portfolio {
   position: relative;
