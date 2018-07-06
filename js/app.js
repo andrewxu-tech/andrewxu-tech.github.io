@@ -1,6 +1,7 @@
 const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 let currentScrollPosition;
 const navbarOriginalPosition = offset(document.getElementsByTagName('navbar')[0]).top;
+let currentlySelected = 'bio-cv';
 
 document.addEventListener('scroll', () => {
   currentScrollPosition = document.getElementsByTagName('html')[0].scrollTop;
@@ -34,6 +35,11 @@ function navbarPosition(currentScrollPosition, navbarOriginalPosition) {
       }
       hr.style.backgroundColor = 'white';
     });
+    [...document.getElementsByClassName('nav-arrow')].forEach(navArrow => {
+      if (navArrow.classList.contains(currentlySelected)) {
+        updateCurrentlySelected(currentlySelected);
+      }
+    });
   } else if (currentScrollPosition < navbarOriginalPosition) {
     navbarElement.classList.remove('fixed-top');
     if (navbarElement.classList.contains('fade-in-background')) {
@@ -59,7 +65,20 @@ function navbarPosition(currentScrollPosition, navbarOriginalPosition) {
       }
       hr.style.backgroundColor = 'black';
     });
+    [...document.getElementsByClassName('nav-arrow')].forEach(navArrow => {
+      navArrow.classList.remove('selected');
+    });
   }
+}
+
+function updateCurrentlySelected(currentlySelected) {
+  [...document.getElementsByClassName('nav-arrow')].forEach(navArrow => {
+    if (navArrow.classList.contains(currentlySelected)) {
+      navArrow.classList.add('selected');
+    } else {
+      navArrow.classList.remove('selected');
+    }
+  });
 }
 
 window.onbeforeunload = function () {
@@ -98,12 +117,12 @@ function fadeUpAndIn() {
   element.addEventListener('click', () => {
     if (element.classList[1] === 'back-to-top') {
       window.smoothScrollTo(0, 0, 1500);
-      window.setTimeout(() => {
-        [...document.getElementsByTagName('section')].forEach(section => {
-          section.classList.add('hidden');
-        });
-        document.getElementsByTagName('footer')[0].classList.add('hidden');
-      }, 1500);
+      // window.setTimeout(() => {
+      //   [...document.getElementsByTagName('section')].forEach(section => {
+      //     section.classList.add('hidden');
+      //   });
+      //   document.getElementsByTagName('footer')[0].classList.add('hidden');
+      // }, 1500);
     } else if (window.scrollY < viewportHeight) {
       [...document.getElementsByTagName('section')].forEach(sectionElement => {
         sectionElement.classList.add('fade-out');
@@ -115,6 +134,8 @@ function fadeUpAndIn() {
       window.setTimeout(() => {
         document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
       }, 490);
+      currentlySelected = element.classList[1];
+      updateCurrentlySelected(element.classList[1]);
       window.smoothScrollTo(0, viewportHeight * 1.1, 1500);
     } else {
       [...document.getElementsByTagName('section')].forEach(sectionElement => {
@@ -132,6 +153,8 @@ function fadeUpAndIn() {
       window.setTimeout(() => {
         document.getElementsByClassName(element.classList[1])[1].classList.remove('fade-in');
       }, 990);
+      currentlySelected = element.classList[1];
+      updateCurrentlySelected(element.classList[1]);
     }
   });
 });
