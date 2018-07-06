@@ -222,6 +222,10 @@ body header {
       padding: 5px;
       cursor: pointer;
       height: calc(100% - 5px); }
+      @media only screen and (max-device-width: 480px) {
+        body header .scroll-down .nav-arrow {
+          margin: 15px 0;
+          width: 25%; } }
       body header .scroll-down .nav-arrow.selected {
         background-color: white;
         border-top-left-radius: 15px;
