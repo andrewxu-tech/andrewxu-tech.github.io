@@ -187,7 +187,30 @@ body header {
     text-align: center;
     position: absolute;
     bottom: 0;
-    z-index: 3; }
+    z-index: 3;
+    height: 7%;
+    color: black;
+    margin-bottom: 30px; }
+    body header .scroll-down.white-color {
+      color: white; }
+    body header .scroll-down.fade-in-background {
+      animation: fadeInBackground 0.5s; }
+@keyframes fadeInBackground {
+  0% {
+    background-color: transparent;
+    color: black; }
+  100% {
+    background-color: black;
+    color: white; } }
+    body header .scroll-down.fade-out-background {
+      animation: fadeOutBackground 0.5s; }
+@keyframes fadeOutBackground {
+  0% {
+    background-color: black;
+    color: white; }
+  100% {
+    background-color: transparent;
+    color: black; } }
     body header .scroll-down.fixed-top {
       position: fixed;
       top: 0; }
@@ -195,7 +218,7 @@ body header {
       display: inline-block;
       width: 13%;
       transform: translateY(-10px);
-      margin: 30px 10%;
+      margin: 15px 10%;
       padding: 5px;
       cursor: pointer; }
       body header .scroll-down .nav-arrow hr {
@@ -206,6 +229,20 @@ body header {
         border-radius: 2.5px;
         width: 30%;
         cursor: pointer; }
+        body header .scroll-down .nav-arrow hr.fade-in-hr {
+          animation: fadeInBackgroundHr 0.5s; }
+@keyframes fadeInBackgroundHr {
+  0% {
+    background-color: black; }
+  100% {
+    background-color: white; } }
+        body header .scroll-down .nav-arrow hr.fade-out-hr {
+          animation: fadeOutBackgroundHr 0.5s; }
+@keyframes fadeOutBackgroundHr {
+  0% {
+    background-color: white; }
+  100% {
+    background-color: black; } }
       @media only screen and (max-width: 480px) {
         body header .scroll-down .nav-arrow {
           margin-bottom: 30px; } }
@@ -224,6 +261,14 @@ body header {
         @media only screen and (max-width: 480px) {
           body header .scroll-down .nav-arrow.contact {
             animation: bobble 2s 6.4s infinite; } }
+      body header .scroll-down .nav-arrow.no-bobble {
+        animation: none; }
+      body header .scroll-down .nav-arrow.bio-cv-bobble-again {
+        animation: bobble 2s 6s infinite; }
+      body header .scroll-down .nav-arrow.portfolio-bobble-again {
+        animation: bobble 2s 6.2s infinite; }
+      body header .scroll-down .nav-arrow.contact-bobble-again {
+        animation: bobble 2s 6.4s infinite; }
       body header .scroll-down .nav-arrow h2 {
         margin: 0;
         cursor: pointer; }
@@ -275,7 +320,7 @@ body .content-nav-arrow {
 
 section.portfolio {
   position: relative;
-  margin: 80px 0;
+  margin: 170px 0;
   height: 100vh;
   display: flex;
   flex-wrap: wrap; }
@@ -596,6 +641,7 @@ section.bio-cv {
       section.bio-cv .skills h2 {
         font-size: calc(36px / 1.5); } }
   section.bio-cv .skills h2.section-title {
+    padding-top: 20px;
     margin: 0 0 15px 30px;
     font-weight: 800; }
   section.bio-cv .skills h2.section-title.black {

@@ -10,10 +10,55 @@ document.addEventListener('scroll', () => {
 });
 
 function navbarPosition(currentScrollPosition, navbarOriginalPosition) {
+  const navbarElement = document.getElementsByTagName('navbar')[0];
   if (currentScrollPosition > navbarOriginalPosition) {
-    document.getElementsByTagName('navbar')[0].classList.add('fixed-top');
+    navbarElement.classList.add('fixed-top');
+    navbarElement.classList.remove('fade-out-background');
+    navbarElement.classList.add('fade-in-background');
+    navbarElement.classList.add('white-color');
+    navbarElement.style.background = 'black';
+    [...document.getElementsByClassName('nav-arrow')].forEach(navArrow => {
+      navArrow.classList.add('no-bobble');
+      if (navArrow.classList.contains('bio-cv')) {
+        navArrow.classList.remove('bio-cv-bobble-again');
+      } else if (navArrow.classList.contains('portfolio')) {
+        navArrow.classList.remove('portfolio-bobble-again');
+      } else {
+        navArrow.classList.remove('contact-bobble-again');
+      }
+    });
+    [...document.getElementsByTagName('hr')].forEach(hr => {
+      if (hr.classList.contains('fade-out-hr')) {
+        hr.classList.remove('fade-out-hr');
+        hr.classList.add('fade-in-hr');
+      }
+      hr.style.backgroundColor = 'white';
+    });
   } else if (currentScrollPosition < navbarOriginalPosition) {
-    document.getElementsByTagName('navbar')[0].classList.remove('fixed-top');
+    navbarElement.classList.remove('fixed-top');
+    if (navbarElement.classList.contains('fade-in-background')) {
+      navbarElement.classList.remove('fade-in-background');
+      navbarElement.classList.add('fade-out-background');
+      navbarElement.classList.remove('white-color');
+    }
+    navbarElement.style.background = 'transparent';
+    [...document.getElementsByClassName('nav-arrow')].forEach(navArrow => {
+      navArrow.classList.remove('no-bobble');
+      if (navArrow.classList.contains('bio-cv')) {
+        navArrow.classList.add('bio-cv-bobble-again');
+      } else if (navArrow.classList.contains('portfolio')) {
+        navArrow.classList.add('portfolio-bobble-again');
+      } else {
+        navArrow.classList.add('contact-bobble-again');
+      }
+    });
+    [...document.getElementsByTagName('hr')].forEach(hr => {
+      if (hr.classList.contains('fade-in-hr')) {
+        hr.classList.remove('fade-in-hr');
+        hr.classList.add('fade-out-hr');
+      }
+      hr.style.backgroundColor = 'black';
+    });
   }
 }
 
@@ -51,7 +96,6 @@ function fadeUpAndIn() {
 
 [...document.getElementsByClassName('nav-arrow')].forEach(element => {
   element.addEventListener('click', () => {
-    document.getElementsByTagName('footer')[0].classList.remove('hidden');
     if (element.classList[1] === 'back-to-top') {
       window.smoothScrollTo(0, 0, 1500);
       window.setTimeout(() => {
@@ -187,6 +231,7 @@ function titleScroll() {
 
 [...document.getElementsByClassName('hover-over')].forEach(element => {
   element.addEventListener('click', () => {
+    document.getElementsByTagName('footer')[0].classList.remove('hidden');
     const portfolioItemDiv = document.getElementsByClassName('portfolio-item-details')[0];
     portfolioItemDiv.removeAttribute('hidden');
     document.getElementsByTagName('html')[0].classList.add('disable-scroll');
