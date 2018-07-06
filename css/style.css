@@ -186,15 +186,26 @@ body header {
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    z-index: 3; }
+    body header .scroll-down.fixed-top {
+      position: fixed;
+      top: 0; }
     body header .scroll-down .nav-arrow {
       display: inline-block;
       width: 13%;
       transform: translateY(-10px);
       margin: 30px 10%;
       padding: 5px;
-      border: 0px solid black;
-      border-radius: 50px; }
+      cursor: pointer; }
+      body header .scroll-down .nav-arrow hr {
+        animation: fadeinanddownhr 2s;
+        background-color: black;
+        height: 5px;
+        border: 0px;
+        border-radius: 2.5px;
+        width: 30%;
+        cursor: pointer; }
       @media only screen and (max-width: 480px) {
         body header .scroll-down .nav-arrow {
           margin-bottom: 30px; } }
@@ -219,20 +230,25 @@ body header {
         @media only screen and (max-width: 480px) {
           body header .scroll-down .nav-arrow h2 {
             font-size: 18px; } }
-      body header .scroll-down .nav-arrow .fas {
-        font-size: 48px;
-        margin: 0px;
-        cursor: pointer; }
 @keyframes fadeinanddown {
   0% {
     color: transparent;
-    transform: translateY(-50px); }
+    transform: translateY(-50px);
+    background-color: transparent; }
   50% {
     color: transparent;
-    transform: translateY(-50px); }
+    transform: translateY(-50px);
+    background-color: transparent; }
   100% {
     color: black;
     transform: translateY(-10px); } }
+@keyframes fadeinanddownhr {
+  0% {
+    background-color: transparent; }
+  50% {
+    background-color: transparent; }
+  100% {
+    background-color: black; } }
 @keyframes bobble {
   0% {
     transform: translateY(-10px); }

@@ -1,7 +1,21 @@
+const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+let currentScrollPosition;
+const navbarOriginalPosition = offset(document.getElementsByTagName('navbar')[0]).top;
+
 document.addEventListener('scroll', () => {
+  currentScrollPosition = document.getElementsByTagName('html')[0].scrollTop;
+  navbarPosition(currentScrollPosition, navbarOriginalPosition);
   titleScroll();
   fadeUpAndIn();
 });
+
+function navbarPosition(currentScrollPosition, navbarOriginalPosition) {
+  if (currentScrollPosition > navbarOriginalPosition) {
+    document.getElementsByTagName('navbar')[0].classList.add('fixed-top');
+  } else if (currentScrollPosition < navbarOriginalPosition) {
+    document.getElementsByTagName('navbar')[0].classList.remove('fixed-top');
+  }
+}
 
 window.onbeforeunload = function () {
   window.scrollTo(0,0);
@@ -38,7 +52,6 @@ function fadeUpAndIn() {
 [...document.getElementsByClassName('nav-arrow')].forEach(element => {
   element.addEventListener('click', () => {
     document.getElementsByTagName('footer')[0].classList.remove('hidden');
-    const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     if (element.classList[1] === 'back-to-top') {
       window.smoothScrollTo(0, 0, 1500);
       window.setTimeout(() => {
@@ -47,11 +60,17 @@ function fadeUpAndIn() {
         });
         document.getElementsByTagName('footer')[0].classList.add('hidden');
       }, 1500);
-    } else if (!window.scrollY) {
+    } else if (window.scrollY < viewportHeight) {
       [...document.getElementsByTagName('section')].forEach(sectionElement => {
-        sectionElement.classList.add('hidden');
+        sectionElement.classList.add('fade-out');
+        window.setTimeout(() => {
+          sectionElement.classList.add('hidden');
+        }, 490);
       });
-      document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
+      document.getElementsByClassName(element.classList[1])[1].classList.add('fade-in');
+      window.setTimeout(() => {
+        document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
+      }, 490);
       window.smoothScrollTo(0, viewportHeight * 1.1, 1500);
     } else {
       [...document.getElementsByTagName('section')].forEach(sectionElement => {
@@ -63,7 +82,6 @@ function fadeUpAndIn() {
           sectionElement.classList.add('hidden');
         });
         document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
-        document.getElementsByClassName('section-title-projects')[0].classList.add('hidden');
         document.getElementsByClassName(element.classList[1])[1].classList.add('fade-in');
         window.smoothScrollTo(0, viewportHeight * 1.1, 1500);
       }, 490);
