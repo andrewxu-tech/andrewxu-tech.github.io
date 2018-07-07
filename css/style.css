@@ -213,6 +213,7 @@ body header {
     color: black; } }
     body header .scroll-down.fixed-top {
       position: fixed;
+      -webkit-backface-visibility: hidden;
       top: 0; }
     body header .scroll-down .nav-arrow {
       display: inline-block;
