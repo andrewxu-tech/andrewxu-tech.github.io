@@ -191,6 +191,8 @@ body header {
     height: 70px;
     color: black;
     margin-bottom: 30px; }
+    body header .scroll-down .mobile-nav-arrow {
+      font-size: 36px; }
     body header .scroll-down.white-color {
       color: white; }
     body header .scroll-down.fade-in-background {
