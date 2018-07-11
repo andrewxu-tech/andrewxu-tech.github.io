@@ -9,6 +9,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
   [...document.getElementsByTagName('section')].forEach(section => {
     section.classList.remove('hidden');
   });
+  document.getElementsByClassName('back-to-top')[0].innerHTML = '<i class="fas fa-chevron-up"></i><h2>back to top</h2>';
 }
 
 document.addEventListener('scroll', () => {
