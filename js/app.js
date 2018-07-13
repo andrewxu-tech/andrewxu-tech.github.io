@@ -5,7 +5,7 @@ let currentlySelected = 'bio-cv';
 
 document.getElementsByTagName('navbar')[1].classList.add('hidden');
 
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   [...document.getElementsByTagName('section')].forEach(section => {
     section.classList.remove('hidden');
   });
@@ -141,12 +141,14 @@ function fadeUpAndIn() {
           sectionElement.classList.add('hidden');
         }, 490);
       });
-      document.getElementsByClassName(element.classList[1])[1].classList.add('fade-in');
-      window.setTimeout(() => {
-        document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
-      }, 490);
-      currentlySelected = element.classList[1];
-      updateCurrentlySelected(element.classList[1]);
+      if (element.classList[1] !== 'mobile-nav-arrow') {
+        document.getElementsByClassName(element.classList[1])[1].classList.add('fade-in');
+        window.setTimeout(() => {
+          document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
+        }, 490);
+        currentlySelected = element.classList[1];
+        updateCurrentlySelected(element.classList[1]);
+      }
       window.smoothScrollTo(0, viewportHeight * 1.1, 1500);
     } else {
       [...document.getElementsByTagName('section')].forEach(sectionElement => {
