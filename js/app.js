@@ -125,6 +125,12 @@ function fadeUpAndIn() {
 }
 
 [...document.getElementsByClassName('nav-arrow')].forEach(element => {
+  if (element.classList[1] === 'mobile-nav-arrow') {
+    element.addEventListener('click', () => {
+      window.smoothScrollTo(0, viewportHeight * 1, 1500);
+    });
+    return;
+  }
   element.addEventListener('click', () => {
     if (element.classList[1] === 'back-to-top') {
       window.smoothScrollTo(0, 0, 1500);
@@ -141,14 +147,12 @@ function fadeUpAndIn() {
           sectionElement.classList.add('hidden');
         }, 490);
       });
-      if (element.classList[1] !== 'mobile-nav-arrow') {
-        document.getElementsByClassName(element.classList[1])[1].classList.add('fade-in');
-        window.setTimeout(() => {
-          document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
-        }, 490);
-        currentlySelected = element.classList[1];
-        updateCurrentlySelected(element.classList[1]);
-      }
+      document.getElementsByClassName(element.classList[1])[1].classList.add('fade-in');
+      window.setTimeout(() => {
+        document.getElementsByClassName(element.classList[1])[1].classList.remove('hidden');
+      }, 490);
+      currentlySelected = element.classList[1];
+      updateCurrentlySelected(element.classList[1]);
       window.smoothScrollTo(0, viewportHeight * 1.1, 1500);
     } else {
       [...document.getElementsByTagName('section')].forEach(sectionElement => {
