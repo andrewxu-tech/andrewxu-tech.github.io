@@ -10,8 +10,8 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     section.classList.remove('hidden');
   });
   document.getElementsByClassName('back-to-top')[0].innerHTML = '<i class="fas fa-chevron-up"></i><h2>back to top</h2>';
-  document.getElementsByClassName('navbar')[0].classList.add('hidden');
-  document.getElementsByClassName('navbar')[1].classList.remove('hidden');
+  document.getElementsByTagName('navbar')[0].classList.add('hidden');
+  document.getElementsByTagName('navbar')[1].classList.remove('hidden');
 }
 
 document.addEventListener('scroll', () => {
