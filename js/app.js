@@ -125,7 +125,7 @@ function fadeUpAndIn() {
 }
 
 [...document.getElementsByClassName('nav-arrow')].forEach(element => {
-  element.addEventListener('click touchstart', () => {
+  element.addEventListener('click', () => {
     if (element.classList[1] === 'back-to-top') {
       window.smoothScrollTo(0, 0, 1500);
       // window.setTimeout(() => {
@@ -171,7 +171,7 @@ function fadeUpAndIn() {
 });
 
 [...document.getElementsByClassName('content-nav-arrow')].forEach(element => {
-  element.addEventListener('click touchstart', () => {
+  element.addEventListener('click', () => {
     const scrollToElementClass = element.classList[1];
     const scrollToElementLocation = offset(document.getElementsByClassName(scrollToElementClass)[1]).top - window.innerHeight / 15;
     window.smoothScrollTo(0, scrollToElementLocation, 1200);
@@ -192,7 +192,7 @@ function titleScroll() {
 }
 
 [...document.getElementsByTagName('i')].forEach(element => {
-  element.addEventListener('click touchstart', () => {
+  element.addEventListener('click', () => {
     element.classList.add('expand-border');
     window.setTimeout(() => {
       element.classList.remove('expand-border');
@@ -211,7 +211,7 @@ function titleScroll() {
       } else {
         imageElement = [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0];
       }
-      element.addEventListener('click touchstart', () => {
+      element.addEventListener('click', () => {
         let maxImages = null;
         if (element.classList[2] === 'poco-a-poco') {
           maxImages = 8;
@@ -240,7 +240,7 @@ function titleScroll() {
       } else {
         imageElement = [...document.getElementsByTagName('img')].filter(imageElement => imageElement.classList[0] === element.classList[2])[0];
       }
-      element.addEventListener('click touchstart', () => {
+      element.addEventListener('click', () => {
         let maxImages = null;
         if (element.classList[2] === 'poco-a-poco') {
           maxImages = 7;
@@ -264,7 +264,7 @@ function titleScroll() {
 });
 
 [...document.getElementsByClassName('hover-over')].forEach(element => {
-  element.addEventListener('click touchstart', () => {
+  element.addEventListener('click', () => {
     document.getElementsByTagName('footer')[0].classList.remove('hidden');
     const portfolioItemDiv = document.getElementsByClassName('portfolio-item-details')[0];
     portfolioItemDiv.removeAttribute('hidden');
@@ -388,7 +388,7 @@ function titleScroll() {
   });
 });
 
-[...document.getElementsByClassName('portfolio-item-close')][0].addEventListener('click touchstart', () => {
+[...document.getElementsByClassName('portfolio-item-close')][0].addEventListener('click', () => {
   const portfolioItemDiv = document.getElementsByClassName('portfolio-item-details')[0];
   document.getElementsByTagName('html')[0].classList.remove('disable-scroll');
   portfolioItemDiv.classList.add('fade-out');
