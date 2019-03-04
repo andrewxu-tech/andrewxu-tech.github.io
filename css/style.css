@@ -704,6 +704,8 @@ section.bio-cv {
           background-repeat: no-repeat;
           background-position: center;
           margin-right: 30px; }
+          section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo.juggle-logo {
+            background-image: url("../assets/images/juggle-logo.png"); }
           section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo.ga-logo {
             background-image: url("../assets/images/ga-logo.jpg"); }
           section.bio-cv .skills div.skills-list .skills-container div.title-and-logo div.logo.tido-logo {
